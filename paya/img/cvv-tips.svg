@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="20px" viewBox="0 0 70 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>CVV Tips</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="CVV-Tips" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <rect id="Rectangle-6" fill="#DEE2E6" x="3" y="5" width="6" height="4" rx="2"></rect>
+            <rect id="Rectangle-6-Copy" fill="#DEE2E6" x="3" y="11" width="4" height="2" rx="1"></rect>
+            <rect id="Rectangle-6-Copy-5" fill="#DEE2E6" x="3" y="15" width="7" height="2" rx="1"></rect>
+            <rect id="Rectangle-6-Copy-2" fill="#DEE2E6" x="9" y="11" width="4" height="2" rx="1"></rect>
+            <rect id="Rectangle-6-Copy-3" fill="#DEE2E6" x="15" y="11" width="4" height="2" rx="1"></rect>
+            <rect id="Rectangle-6-Copy-4" fill="#DEE2E6" x="21" y="11" width="4" height="2" rx="1"></rect>
+            <rect id="Rectangle-5" stroke="#DEE2E6" stroke-width="2" x="1" y="1" width="26" height="18" rx="3"></rect>
+        </g>
+        <rect id="Rectangle-6-Copy-11" fill="#DEE2E6" x="39" y="5" width="26" height="4"></rect>
+        <rect id="Rectangle-6-Copy-6" fill="#DEE2E6" x="54" y="10" width="2" height="2"></rect>
+        <rect id="Rectangle-6-Copy-7" fill="#DEE2E6" x="57" y="10" width="2" height="2"></rect>
+        <rect id="Rectangle-6-Copy-8" fill="#DEE2E6" x="60" y="10" width="2" height="2"></rect>
+        <rect id="Rectangle-5-Copy" stroke="#DEE2E6" stroke-width="2" x="38" y="1" width="26" height="18" rx="3"></rect>
+        <circle id="Oval-2" stroke="#48A9FD" stroke-width="2" cx="25" cy="10" r="6"></circle>
+        <circle id="Oval-2-Copy" stroke="#48A9FD" stroke-width="2" cx="63" cy="10" r="6"></circle>
+    </g>
+</svg>

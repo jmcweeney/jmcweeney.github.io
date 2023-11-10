@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>MSD -- Sign In</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="../css/paya.css" rel="stylesheet">
+  </head>
+
+  <body class="password-body">
+
+    <form action="http://paya.addl.co/enrollment/index.html" method="post" class="needs-validation" novalidate>
+
+    <section class="jumbotron text-center pb-1">
+      <div class="container">
+        <span class="d-flex align-items-center justify-content-center mb-5">
+          <img src="../img/paya-logo.png">
+          <img class="co-brand-spacer" src="../img/logo-spacer.png">
+          <img class="co-brand" src="../img/partner-logo-isite.svg">
+        </span>
+        <h2 class="pb-2">Sign into your Account</h2>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="paya-cards form-signin">
+        <div class="card">
+          <div class="card-body bg-login rounded p-4">
+            <div class="paya form-row">
+              <div class="form-group col-12">
+                <label for="inputEmail">Email address</label>
+                <input type="text" class="form-control input" id="inputEm" placeholder="janedoe@gmail.com" required autofocus>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+              </div>
+              <div class="form-group col-12 mb-2">
+                <label for="inputPass">Password</label>
+                <div class="paya-pwt">
+                  <input class="active form-control input" type="password" maxlength="24" id="paya-pwt" placeholder="Not sure? Find help below..." aria-label="User password" aria-describedby="paya-pwt" required>
+                   <div class="pwt-icons">
+                     <i id="icon" class="text-muted far fa-eye-slash"></i>
+                   </div>
+               </div>
+              </div>
+            </div>
+            <div class="form-row mt-4 mb-0">
+              <div class="form-group col-12 mb-1">
+                <div class="d-flex flex-wrap justify-content-start justify-content-md-between">
+                  <!-- <div class="d-inline custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="loginRem">
+                    <label class="text-gray custom-control-label font-weight-normal" for="loginRem">Remember my email</label>
+                  </div> -->
+                  <div class="d-inline paya mt-3 mt-md-0">
+                    <div class="text-primary font-weight-normal">
+                      <span><a href="reset-password.html">Forgot your password?</a></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="paya d-flex align-items-center justify-content-center mt-4">
+            <a role="button" class="btn btn-primary btn-login" href="applications.html">Sign In</a>
+            <!-- <button type="submit" id="submit" class="btn btn-primary btn-login">Sign In</button> -->
+          </div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+  </form>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="../js/vendor/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/vendor/holder.min.js"></script>
+  <script src="../js/paya.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>ACH Details</title>
+
+    <!-- Bootstrap core CSS, Google Font & custom Paya CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="../css/paya.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header class="navbar navbar-light bg-light flex-row bd-navbar justify-content-between sticky-top py-1 p-md-3">
+      <a href="index.html" class="sidebar-brand img-responsive ml-lg-3">
+        <span class="sidebar-brand-icon d-flex align-items-center">
+          <img src="../img/paya-logo.png">
+          <img class="co-brand-spacer" src="../img/logo-spacer.png">
+          <img class="co-brand" src="../img/partner-logo-isite.svg">
+        </span>
+      </a>
+      <div class="progress w-25 mr-lg-3">
+        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </header>
+
+    <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h2 class="pb-2">Provide your ACH details.</h2>
+        <h5 class="lead text-gray">Link your bank account so you can accept bank deposits and checks, <span>as well as some underwriting details and transaction types.</span></h5>
+      </div>
+    </section>
+
+    <div class="pt-1 pb-4 mb-4">
+      <div class="container px-0">
+
+        <div class="d-flex justify-content-center">
+          <div class="paya-cards col-md-10 col-lg-7">
+            <div class="card payment-card">
+              <div class="card-body mt-md-4 mb-2">
+                <div class="mb-4">
+                  <h4>Business Preferred ACH Descriptor</h4>
+                </div>
+                <div class="paya form-row mb-4">
+                  <div class="form-group col-12 col-md-6">
+                    <label for="inputCity">Legal business name</label>
+                    <input type="text" class="form-control input" id="inputBusName" placeholder="Include Inc., LLC, etc." required autofocus>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                  <div class="form-group col-12 col-md-6">
+                    <label for="inputCity">Business phone number</label>
+                    <input type="number" class="form-control input" id="inputPhone" placeholder="(703) 555-1212" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                </div>
+                <hr class="black-rule-2">
+
+                <div class="mb-4">
+                  <h4>Underwriting Profile</h4>
+                </div>
+                <div class="paya form-row">
+                  <div class="form-group col-12">
+                    <label for="inputName">What do you sell or provide?</label>
+                    <input type="text" class="form-control input" id="inputBusCon" placeholder="Describe your products or services..." required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                  <div class="form-group col-12">
+                    <label for="inputName">How will ACH services be used?</label>
+                    <input type="text" class="form-control input" id="inputBusCon" placeholder="Will you accept checks or deposits... (Optional)" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                </div>
+                <div class="paya form-row">
+                  <div class="form-group col-6 col-md-4">
+                    <label for="inputRecAmount">Monthly revenue</label>
+                      <select class="custom-select select" required>
+                        <option value="" selected disabled hidden>Optional</option>
+                        <option value="1">$1,000 - $5,000</option>
+                        <option value="2">$10,000 - $15,000</option>
+                      </select>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                  </div>
+                  <div class="form-group col-6 col-md-4">
+                    <label for="inputRecAmount">Average ticket</label>
+                      <select class="custom-select select" required>
+                        <option value="" selected disabled hidden>Daily</option>
+                        <option value="1">$100</option>
+                        <option value="2">$500</option>
+                      </select>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                  </div>
+                  <div class="form-group col-6 col-md-4">
+                    <label for="inputRecAmount">Highest ticket</label>
+                      <select class="custom-select select" required>
+                        <option value="" selected disabled hidden>Daily</option>
+                        <option value="1">$1,000</option>
+                        <option value="2">$5,000</option>
+                      </select>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                  </div>
+                </div>
+                <div class="paya form-row">
+                  <div class="form-group col-12 col-md-4">
+                    <label for="inputTrans">Monthly Transactions</label>
+                      <select class="custom-select select" required>
+                        <option value="" selected disabled hidden>Monthly</option>
+                        <option value="1">$1,000</option>
+                        <option value="2">$5,000</option>
+                      </select>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                  </div>
+                  <div class="form-group col-12 col-md-8">
+                    <label for="inputState">Return policy</label>
+                    <input type="text" class="form-control input" id="inputPhone" maxlength="11" placeholder="30, 60, 90 days? Please explain..." required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12 mb-2">
+                    <label class="paya-label" for="inputCardNumber">Funds returns</label>
+                    <div class="paya-notes mt-0 mb-2" style="width: 100%;">
+                      On non-sufficient funds (NSF) returns, should processor automatically resubit transactions?
+                    </div>
+                    <div class="custom-control-spacer mx-0 mt-0 pt-2 px-0">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="returnsYes" name="returnsRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="returnsYes">Yes</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="returnsNo" name="returnsRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="returnsNo">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="paya form-row">
+                  <div class="form-group col-12">
+                    <label for="inputState">General comments</label>
+                    <input type="text" class="form-control input" id="inputPhone" maxlength="11" placeholder="Do you ship items? Handle sensitive materials?" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                </div>
+                <hr class="black-rule-2">
+
+                <div class="mt-3 mb-4">
+                  <h4>Transaction Types</h4>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12 mb-2">
+                    <label class="paya-label" for="inputCardNumber">Does business receive physical checks?</label>
+                    <div class="custom-control-spacer mx-0 mt-0 pt-2 px-0">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="physicalChecks" name="checksRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="physicalChecks">Yes</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="physicalChecksNo" name="checksRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="physicalChecksNo">No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12 mb-2">
+                    <label class="paya-label" for="inputCardNumber">Electronic debit</label>
+                    <div class="paya-notes mt-0 mb-2" style="width: 100%;">
+                      If no physical check is presented, how is the customer’s consent to debit electronically captured?
+                    </div>
+                    <div class="custom-control-spacer mx-0 mt-0 pt-2 px-0">
+                      <div class="custom-control custom-radio mb-2">
+                        <input type="radio" id="debitPPD" name="debitRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="debitPPD">Signed written authorization (Personal or Commerical account)</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="debitWeb" name="debitRadio" class="custom-control-input" data-toggle="collapse" data-target="#webUI" aria-expanded="false" aria-controls="webUI" required>
+                        <label class="custom-control-label" for="debitWeb">Online authorization (Website)</label>
+                      </div>
+                    </div>
+
+                    <!-- Web UI Expandable -->
+                    <div class="collapse hide indent-left px-3 mx-4" id="webUI">
+                      <div class="form-row">
+                        <div class="form-group col-12 mt-2 mb-1">
+                          <label class="paya-label" for="inputCardNumber">How are you authenticating your users?</label>
+                          <div class="custom-control-spacer mx-0 mt-0 pt-2 px-0">
+                            <div class="custom-control custom-radio mb-2">
+                              <input type="radio" id="userAuthSig" name="authUsers" class="custom-control-input" required>
+                              <label class="custom-control-label" for="userAuthSig">Electronic signature</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="userLoginUn" name="authUsers" class="custom-control-input" required>
+                              <label class="custom-control-label" for="userLoginUn">Username and Password</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12 mt-2 mb-2">
+                    <label class="paya-label" for="inputCardNumber">ACH transactions</label>
+                    <div class="custom-control-spacer mx-0 mt-0 pt-2 px-0 d-flex justify-content-start">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="achTransSingle" name="achRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="achTransSingle">Single</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="achTransRec" name="achRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="achTransRec">Recurring</label>
+                      </div>
+                      <div class="custom-control custom-checkbox custom-checkbox-inline">
+                        <input type="checkbox" id="achBoth" name="achRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="achBoth">Both</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12 mb-2">
+                    <label class="paya-label" for="inputCardNumber">Business use</label>
+                    <div class="custom-control-spacer mx-0 mt-0 pt-2 px-0">
+                      <div class="custom-control custom-radio mb-2">
+                        <input type="radio" id="procProvide" name="businessRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="procProvide">Processor provided authorization form/script</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="mercProvide" name="businessRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="mercProvide">Merchant created authorization form/script</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="black-rule-2">
+                <div class="mt-3 mb-4">
+                  <h4>Customer Authentication Method</h4>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-12 mb-2">
+                    <label class="paya-label" for="inputCardNumber">How will customers authenticate themselves?</label>
+                    <div class="custom-control-spacer mx-0 mt-0 pt-2 px-0">
+                      <div class="custom-control custom-radio mb-2">
+                        <input type="radio" id="provideSig" name="authRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="provideSig">Provide electronic signature</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="loginUn" name="authRadio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="loginUn">Log in with a Username and Password</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="black-rule-2">
+                <div class="paya d-flex justify-content-between mt-4 mb-3">
+                  <a role="button" class="btn btn-outline-secondary" href="6-bank.html">Back</a>
+                  <a role="button" class="btn btn-primary" href="9-review.html">Continue</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../js/vendor/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/vendor/holder.min.js"></script>
+    <script src="../js/modernizr.min.js"></script>
+    <script src="../js/dots.js"></script>
+    <script src="../js/paya.js"></script>
+
+  </body>
+</html>

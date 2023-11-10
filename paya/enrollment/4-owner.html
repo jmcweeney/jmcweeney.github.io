@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Business owner</title>
+
+    <!-- Bootstrap core CSS, Google Font & custom Paya CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="../css/paya.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header class="navbar navbar-light bg-light flex-row bd-navbar justify-content-between sticky-top py-1 p-md-3">
+      <a href="index.html" class="sidebar-brand img-responsive ml-lg-3">
+        <span class="sidebar-brand-icon d-flex align-items-center">
+          <img src="../img/paya-logo.png">
+          <img class="co-brand-spacer" src="../img/logo-spacer.png">
+          <img class="co-brand" src="../img/partner-logo-isite.svg">
+        </span>
+      </a>
+      <div class="progress w-25 mr-lg-3">
+        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h2 class="pb-2">Tell us about the business owner</h2>
+          <h5 class="lead text-gray">We won't use this information to perform a credit check, <span>we simply need to verify your identity.</span></h5>
+        </div>
+      </section>
+
+      <div class="pt-1 pb-4">
+        <div class="container px-0">
+
+          <div class="d-flex justify-content-center">
+            <div class="paya-cards col-md-10 col-lg-7">
+              <div class="card payment-card">
+                <div class="card-body mt-md-4 mb-2">
+                  <div class="paya form-row">
+                    <div class="form-group col-12 col-md-2">
+                      <label for="inputTitle">Title</label>
+                      <select class="custom-select select" required autofocus>
+                        <option value="" selected disabled hidden>Ms.</option>
+                        <option value="1">Ms.</option>
+                        <option value="2">Mrs.</option>
+                        <option value="3">Mr.</option>
+                      </select>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                      <label for="inputFName">First name</label>
+                      <input type="text" class="form-control input" id="inputFName" placeholder="Jane" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-6">
+                      <label for="inputLName">Last name</label>
+                      <input type="text" class="form-control input" id="inputLName" placeholder="Doe" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="paya form-row">
+                    <div class="form-group col-12 col-md-8">
+                      <label for="inputHomeAddr">Home address</label>
+                      <input type="text" class="form-control input" id="inputHomeAddr" placeholder="123 Anystreet" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                      <label for="inputApt">Apt/Unit</label>
+                      <input type="text" class="form-control input" id="inputApt" placeholder="100" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-6">
+                      <label for="inputCity">City</label>
+                      <input type="text" class="form-control input" id="inputCity" placeholder="Anytown" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-6 col-md-2">
+                      <label for="inputState">State</label>
+                      <input type="text" class="form-control input text-uppercase" id="inputState" maxlength="2" placeholder="AL" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-6 col-md-4">
+                      <label for="inputZip">Zip Code</label>
+                      <input type="number" class="form-control input" id="inputZip" maxlength="5" placeholder="12345" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="paya form-row">
+                    <div class="form-group col-12 col-md-6">
+                      <label for="inputDOB">Date of birth</label>
+                      <input type="text" class="form-control input" id="inputDOB" placeholder="11/06/85" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-6">
+                      <label for="inputEmail">Email address</label>
+                      <input type="text" class="form-control input" id="inputEmail" maxlength="11" placeholder="jane.doe@gmail.com" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="paya form-row">
+                    <div class="form-group col-12 col-md-4">
+                      <label for="inputSSN">Business owner SSN</label>
+                      <input type="text" class="form-control input" id="inputSSN" placeholder="123-45-6789" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                      <label for="inputPhone">Business phone number</label>
+                      <input type="text" class="form-control input" id="inputPhone" placeholder="(703) 555-1212" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                      <label for="inputFax">Business fax number</label>
+                      <input type="text" class="form-control input" id="inputFax" placeholder="(703) 555-1212" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="paya form-row">
+                    <div class="form-group col-12 col-md-4">
+                      <label for="inputEquity">Equity &percnt; of Ownership</label>
+                      <input type="number" class="form-control input" id="inputEquity" maxlength="3" placeholder="Ex: 100%" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                      <label for="inputDriver">Driver's License number</label>
+                      <input type="text" class="form-control input" id="inputDriver" placeholder="A00000000" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-4">
+                      <label for="inputState">State</label>
+                      <input type="text" class="form-control input text-uppercase" maxlength="2" id="inputState" placeholder="VA" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- Add another owner UI -->
+                  <div class="collapse" id="addOwnerUI">
+                    <h5 class="mt-3 mb-4">Business owner (2)</h5>
+                    <div class="paya form-row">
+                      <div class="form-group col-12 col-md-2">
+                        <label for="inputTitle">Title</label>
+                        <select class="custom-select select" required autofocus>
+                          <option value="" selected disabled hidden>Ms.</option>
+                          <option value="1">Ms.</option>
+                          <option value="2">Mrs.</option>
+                          <option value="3">Mr.</option>
+                        </select>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-12 col-md-4">
+                        <label for="inputFName">First name</label>
+                        <input type="text" class="form-control input" id="inputFName" placeholder="Jane" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-12 col-md-6">
+                        <label for="inputLName">Last name</label>
+                        <input type="text" class="form-control input" id="inputLName" placeholder="Doe" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                    </div>
+                    <div class="paya form-row">
+                      <div class="form-group col-12 col-md-8">
+                        <label for="inputHomeAddr">Home address</label>
+                        <input type="text" class="form-control input" id="inputHomeAddr" placeholder="123 Anystreet" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-12 col-md-4">
+                        <label for="inputApt">Apt/Unit</label>
+                        <input type="text" class="form-control input" id="inputApt" placeholder="100" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-12 col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control input" id="inputCity" placeholder="Anytown" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-6 col-md-2">
+                        <label for="inputState">State</label>
+                        <input type="text" class="form-control input text-uppercase" id="inputState" maxlength="2" placeholder="AL" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-6 col-md-4">
+                        <label for="inputZip">Zip Code</label>
+                        <input type="number" class="form-control input" id="inputZip" maxlength="5" placeholder="12345" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                    </div>
+                    <div class="paya form-row">
+                      <div class="form-group col-12 col-md-6">
+                        <label for="inputDOB">Date of birth</label>
+                        <input type="text" class="form-control input" id="inputDOB" placeholder="11/06/85" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-12 col-md-6">
+                        <label for="inputEmail">Email address</label>
+                        <input type="text" class="form-control input" id="inputEmail" maxlength="11" placeholder="jane.doe@gmail.com" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                    </div>
+                    <div class="paya form-row">
+                      <div class="form-group col-12 col-md-4">
+                        <label for="inputSSN">Business owner SSN</label>
+                        <input type="text" class="form-control input" id="inputSSN" placeholder="123-45-6789" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-12 col-md-4">
+                        <label for="inputPhone">Business phone number</label>
+                        <input type="text" class="form-control input" id="inputPhone" placeholder="(703) 555-1212" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-12 col-md-4">
+                        <label for="inputFax">Business fax number</label>
+                        <input type="text" class="form-control input" id="inputFax" placeholder="(703) 555-1212" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                    </div>
+                    <div class="paya form-row">
+                      <div class="form-group col-12 col-md-4">
+                        <label for="inputEquity">Equity &percnt; of Ownership</label>
+                        <input type="number" class="form-control input" id="inputEquity" maxlength="3" placeholder="Ex: 100%" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-12 col-md-4">
+                        <label for="inputDriver">Driver's License number</label>
+                        <input type="text" class="form-control input" id="inputDriver" placeholder="A00000000" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                      <div class="form-group col-12 col-md-4">
+                        <label for="inputState">State</label>
+                        <input type="text" class="form-control input text-uppercase" maxlength="2" id="inputState" placeholder="VA" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                          Required
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add another button -->
+                  <div class="d-flex align-items-between mt-3">
+                    <div class="col-11 col-lg-11 px-0">
+                      <h6 class="font-weight-medium">Add a business owner (limited to 4 owners)</h6>
+                    </div>
+                    <div class="col-1 col-lg-1 paya px-0 align-content-md-end">
+                      <button class="paya-add" data-toggle="collapse" data-target="#addOwnerUI" aria-expanded="false" aria-controls="addOwnerUI"></button>
+                    </div>
+                  </div>
+                  <hr class="black-rule-1">
+                  <div class="paya d-flex justify-content-between mt-4 mb-3">
+                    <a role="button" class="btn btn-outline-secondary" href="3-bundle.html">Back</a>
+                    <a role="button" class="btn btn-primary" href="5-details.html">Continue</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../js/vendor/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/vendor/holder.min.js"></script>
+    <script src="../js/modernizr.min.js"></script>
+    <script src="../js/dots.js"></script>
+    <script src="../js/paya.js"></script>
+
+  </body>
+</html>

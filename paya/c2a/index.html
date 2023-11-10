@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>C2A — Merchant Sign In</title>
+
+    <!-- Bootstrap core CSS, Google Font & custom Paya CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="../css/paya.css" rel="stylesheet">
+  </head>
+
+  <body class="password-body">
+    <!-- Expose the button on line 70 to enable validation -->
+    <form action="application.html" method="post" class="needs-validation" novalidate>
+
+      <section class="jumbotron text-center pb-1">
+        <div class="container">
+          <img class="mb-5" src="../img/paya-logo.png" alt="" width="95">
+          <h2 class="signin pb-2">Please verify your information <span>to access your Merchant Application</span></h2>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="paya-cards form-signin">
+          <div class="card">
+            <div class="card-body bg-login rounded p-4">
+              <div class="paya form-row">
+                <div class="form-group col-12">
+                  <label for="inputName">Email address</label>
+                  <input type="text" class="form-control input" id="inputEm" placeholder="janedoe@gmail.com" autocomplete="off" required autofocus>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Valid email format required
+                  </div>
+                </div>
+                <div class="form-group col-12 col-md-4">
+                  <label for="inputAddr">Date of Birth</label>
+                  <div class="paya-card-brand">
+                    <input type="number" class="form-control input" id="inputDOB" placeholder="MM/DD/YYYY" maxlength="10" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Proper format required
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-6 col-md-4">
+                  <label for="inputAddr">Last 4 digits of SSN</label>
+                  <div class="paya-card-brand">
+                    <input type="number" class="form-control input" id="inputSSN" placeholder="0000" maxlength="4" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      4 digits required
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-6 col-md-4">
+                  <label for="inputAddr">Application Code</label>
+                  <div class="paya-card-brand">
+                    <input type="number" class="form-control input" id="inputApp" placeholder="000 000" maxlength="6" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      6 digits required
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="invalid-feedback" style="width: 100%;">
+                <p>No contract can be located using these credentials. Please try again, or contact your representative.</p>
+              </div>
+          </div>
+          <div class="paya d-flex align-items-center justify-content-center mt-4">
+            <a class="btn btn-primary btn-login" href="application.html">Sign In</a>
+            <!-- <button type="submit" id="submit" class="btn btn-primary btn-login">Sign In</button> -->
+            <div class="small text-gray text-right ml-auto">
+              <span>Questions? Contact your representative.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+  </form>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="../js/vendor/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/vendor/holder.min.js"></script>
+  <script src="../js/paya.js"></script>
+
+</body>
+</html>

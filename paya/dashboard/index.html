@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>Paya UI Library</title>
+
+    <!-- Bootstrap core CSS & custom Paya CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,800,400italic" rel="stylesheet">
+    <link href="../css/toolkit-light.css" rel="stylesheet">
+    <link href="../css/paya.css" rel="stylesheet">
+
+  </head>
+
+<body>
+  <div class="container">
+    <div class="row mt-4 mt-lg-5">
+      <div class="col-md-3 sidebar">
+        <nav class="sidebar-nav">
+          <div class="sidebar-header">
+            <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md">
+              <span class="sr-only">Toggle nav</span>
+            </button>
+            <a class="sidebar-brand img-responsive ml-lg-3 mt-lg-3" href="../index.html">
+              <span class="sidebar-brand-icon"><img src="img/paya-logo.png"></span>
+            </a>
+          </div>
+
+          <div class="collapse nav-toggleable-md" id="nav-toggleable-md">
+            <ul class="nav nav-pills nav-stacked flex-column mt-3">
+              <li class="nav-header mb-3">Existing Elements</li>
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="payments/index.html">Payment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="receipt/index.html">Transaction Receipt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="settings/index.html">Settings (WIP)</a>
+              </li>
+              <li class="nav-header">More</li>
+              <li class="nav-item">
+                <a class="nav-link " href="modal/index.html">Modal Samples</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link "href="https://marvelapp.com/45b38hg" target="_blank">
+                  Marvel Prototype
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">
+                  Design Documentation
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mailto:jeff.mcweeney@paya.com?subject=Hi from Paya UI...">
+                  Email Support
+                </a>
+              </li>
+            </ul>
+            <hr class="visible-xs mt-3">
+          </div>
+        </nav>
+      </div>
+      <div class="col-md-9 content">
+        <div class="dashhead">
+          <div class="dashhead-titles">
+            <h6 class="dashhead-subtitle">Design</h6>
+            <h2 class="dashhead-title">User Interface Library</h2>
+          </div>
+        </div>
+
+<hr class="mt-3">
+
+<div class="row text-center mt-5">
+  <div class="col-md-4 mb-4 mb-md-3">
+    <div class="w-3 mx-auto">
+      <canvas
+        class="ex-graph"
+        width="200" height="200"
+        data-chart="doughnut"
+        data-dataset="[230, 130]"
+        data-dataset-options="{ backgroundColor: ['#1ca8dd', '#1bc98e'] }"
+        data-labels="['Returning', 'New']">
+      </canvas>
+    </div>
+    <strong class="text-muted">Traffic</strong>
+    <h4>New vs Returning</h4>
+  </div>
+  <div class="col-md-4 mb-4 mb-md-3">
+    <div class="w-3 mx-auto">
+      <canvas
+        class="ex-graph"
+        width="200" height="200"
+        data-chart="doughnut"
+        data-dataset="[330, 30]"
+        data-dataset-options="{ backgroundColor: ['#1ca8dd', '#1bc98e'] }"
+        data-labels="['Returning', 'New']">
+      </canvas>
+    </div>
+    <strong class="text-muted">Revenue</strong>
+    <h4>New vs Recurring</h4>
+  </div>
+  <div class="col-md-4 mb-4 mb-md-3">
+    <div class="w-3 mx-auto">
+      <canvas
+        class="ex-graph"
+        width="200" height="200"
+        data-chart="doughnut"
+        data-dataset="[100, 260]"
+        data-dataset-options="{ backgroundColor: ['#1ca8dd', '#1bc98e'] }"
+        data-labels="['Referrals', 'Direct']">
+      </canvas>
+    </div>
+    <strong class="text-muted">Traffic</strong>
+    <h4>Direct vs Referrals</h4>
+  </div>
+</div>
+
+<div class="hr-divider mt-5 mb-3">
+  <h3 class="hr-divider-content hr-divider-heading">Quick stats</h3>
+</div>
+
+<div class="row statcards">
+  <div class="col-md-6 col-xl-3 mb-3 mb-md-4 mb-xl-0">
+    <div class="statcard statcard-success">
+      <div class="p-3">
+        <span class="statcard-desc">Page views</span>
+        <h2 class="statcard-number">
+          1,293
+          <small class="delta-indicator delta-positive">5%</small>
+        </h2>
+        <hr class="statcard-hr mb-0">
+      </div>
+      <canvas id="sparkline1" width="378" height="94"
+        class="sparkline"
+        data-chart="spark-line"
+        data-dataset="[[28,68,41,43,96,45,100]]"
+        data-labels="['a','b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-3 mb-3 mb-md-4 mb-xl-0">
+    <div class="statcard statcard-danger">
+      <div class="p-3">
+        <span class="statcard-desc">Downloads</span>
+        <h2 class="statcard-number">
+          758
+          <small class="delta-indicator delta-negative">1.3%</small>
+        </h2>
+        <hr class="statcard-hr mb-0">
+      </div>
+      <canvas id="sparkline1" width="378" height="94"
+        class="sparkline"
+        data-chart="spark-line"
+        data-dataset="[[4,34,64,27,96,50,80]]"
+        data-labels="['a','b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-3 mb-3 mb-md-4 mb-xl-0">
+    <div class="statcard statcard-info">
+      <div class="p-3">
+        <span class="statcard-desc">Sign-ups</span>
+        <h2 class="statcard-number">
+          1,293
+          <small class="delta-indicator delta-positive">6.75%</small>
+        </h2>
+        <hr class="statcard-hr mb-0">
+      </div>
+      <canvas id="sparkline1" width="378" height="94"
+        class="sparkline"
+        data-chart="spark-line"
+        data-dataset="[[12,38,32,60,36,54,68]]"
+        data-labels="['a','b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-3 mb-3 mb-md-4 mb-xl-0">
+    <div class="statcard statcard-warning">
+      <div class="p-3">
+        <span class="statcard-desc">Downloads</span>
+        <h2 class="statcard-number">
+          758
+          <small class="delta-indicator delta-negative">1.3%</small>
+        </h2>
+        <hr class="statcard-hr mb-0">
+      </div>
+      <canvas id="sparkline1" width="378" height="94" class="sparkline"
+        data-chart="spark-line"
+        data-dataset="[[43,48,52,58,50,95,100]]"
+        data-labels="['a','b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+</div>
+
+<hr class="mt-5">
+
+<div class="row">
+  <div class="col-md-6 mb-5">
+    <div class="list-group mb-3">
+      <h6 class="list-group-header">
+        Cities
+      </h6>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 62.4%;"></span>
+          <span>Dunwoody</span>
+          <span class="text-muted">62.4%</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 15.0%;"></span>
+          <span>Reston</span>
+          <span class="text-muted">15.0%</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 5.0%;"></span>
+          <span>Ft. Walton</span>
+          <span class="text-muted">5.0%</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 5.0%;"></span>
+          <span>Eltingville</span>
+          <span class="text-muted">5.0%</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 4.5%;"></span>
+          <span>Sunnyvale</span>
+          <span class="text-muted">4.5%</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 2.3%;"></span>
+          <span>Kansas City</span>
+          <span class="text-muted">2.3%</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 1.7%;"></span>
+          <span>Montgomeryville</span>
+          <span class="text-muted">1.7%</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 1.5%;"></span>
+          <span>North Wales</span>
+          <span class="text-muted">1.5%</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 1.4%;"></span>
+          <span>Ashburn</span>
+          <span class="text-muted">1.4%</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span class="list-group-progress" style="width: 1.2%;"></span>
+          <span>Rye</span>
+          <span class="text-muted">1.2%</span>
+        </a>
+
+    </div>
+    <a href="#" class="btn btn-outline-primary px-3">All cities</a>
+  </div>
+  <div class="col-md-6 mb-5">
+    <div class="list-group mb-3">
+      <h6 class="list-group-header">
+        Most visited pages
+      </h6>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/ (Logged out)</span>
+          <span class="text-muted">3,929,481</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/ (Logged in)</span>
+          <span class="text-muted">1,143,393</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/payments</span>
+          <span class="text-muted">938,287</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/payments/transaction-history</span>
+          <span class="text-muted">749,393</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/activity/recurring</span>
+          <span class="text-muted">695,912</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/users/thesituation</span>
+          <span class="text-muted">501,938</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/dashboard</span>
+          <span class="text-muted">392,842</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/reports/2018</span>
+          <span class="text-muted">298,183</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/reports/automated/weekly</span>
+          <span class="text-muted">193,129</span>
+        </a>
+
+        <a class="list-group-item list-group-item-action justify-content-between" href="#">
+          <span>/users/manage/admins/roles</span>
+          <span class="text-muted">93,382</span>
+        </a>
+
+    </div>
+    <a href="#" class="btn btn-outline-primary px-3">View all pages</a>
+  </div>
+</div>
+
+<div class="list-group mb-3">
+  <h6 class="list-group-header">
+    Devices and resolutions
+  </h6>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Desktop (1920x1080)</span>
+      <span class="text-muted">3,929,481</span>
+    </a>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Desktop (1366x768)</span>
+      <span class="text-muted">1,143,393</span>
+    </a>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Desktop (1440x900)</span>
+      <span class="text-muted">938,287</span>
+    </a>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Desktop (1280x800)</span>
+      <span class="text-muted">749,393</span>
+    </a>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Tablet (1024x768)</span>
+      <span class="text-muted">695,912</span>
+    </a>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Tablet (768x1024)</span>
+      <span class="text-muted">501,938</span>
+    </a>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Phone (320x480)</span>
+      <span class="text-muted">392,842</span>
+    </a>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Phone (720x450)</span>
+      <span class="text-muted">298,183</span>
+    </a>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Desktop (2560x1080)</span>
+      <span class="text-muted">193,129</span>
+    </a>
+
+    <a class="list-group-item list-group-item-action justify-content-between" href="#">
+      <span>Desktop (2560x1600)</span>
+      <span class="text-muted">93,382</span>
+    </a>
+
+    </div>
+    <a href="#" class="btn btn-outline-primary px-3">View all devices</a>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/tether.min.js"></script>
+  <script src="../js/chart.js"></script>
+  <script src="../js/tablesorter.min.js"></script>
+  <script src="../js/toolkit.js"></script>
+  <script src="../js/application.js"></script>
+
+</body>
+</html>

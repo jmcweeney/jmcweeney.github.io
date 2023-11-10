@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../img/favicon.ico">
+
+  <title>Paya Payments UI</title>
+
+  <!-- Bootstrap core CSS & custom Paya CSS -->
+  <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,800,400italic" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="../css/paya.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="sticky-top pt-3 pl-3 border-bottom-none">
+  <a class="modal-prev-arrow" href="../index.html" role="button" data-slide="prev"><span>&larr;</span></a>
+</div>
+
+<form action="../receipt/index.html" method="post" class="needs-validation" novalidate>
+
+<div class="container">
+  <div class="row justify-content-center">
+   <div class="col-md-10 col-lg-6">
+     <!-- Sample Alert -->
+     <div class="alert alert-error mt-3 mt-md-5 mb-0" role="alert">
+       <p class="mb-2">Sorry, your card was declined due to <span>insufficient funds</span>.</p>
+       <p class="alert-error-timestamp small m-0">Error 51 &#8212; Jul 13, 2:11 PM</p>
+     </div>
+   </div>
+ </div>
+
+ <div class="row justify-content-center my-4 my-lg-5">
+  <div class="paya-cards col-md-10 col-lg-6 mb-3">
+      <!-- Billing Information -->
+      <div class="card payment-card border-bottom-2">
+        <div class="card-header pt-4 pb-0">
+          <h4 class="card-title">Billing Information</h4>
+        </div>
+        <div class="card-body">
+          <div class="paya form-row">
+            <div class="form-group col-12">
+              <label for="inputName">Full name</label>
+              <input type="text" class="form-control input" id="inputFn" placeholder="Jane Doe" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Required
+              </div>
+            </div>
+          </div>
+          <div class="paya form-row">
+            <div class="paya form-group col-12 col-md-6">
+              <label for="inputAddr">Address</label>
+              <input type="text" class="form-control input" id="inputAddr1" placeholder="123 Anystreet" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Required
+              </div>
+            </div>
+            <div class="form-group col-12 col-md-6">
+              <label for="inputCity">City</label>
+              <input type="text" class="form-control input" id="inputCity" placeholder="Anytown" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Required
+              </div>
+            </div>
+          </div>
+          <div class="paya form-row">
+            <div class="form-group col-6 col-md-3">
+              <label for="inputState">State</label>
+              <input type="text" class="form-control input text-uppercase" id="inputState" maxlength="2" placeholder="AL" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Required
+              </div>
+            </div>
+            <div class="form-group col-6 col-md-3">
+              <label for="inputZip">Zip Code</label>
+              <input type="number" class="form-control input" id="inputZip" maxlength="5" placeholder="12345" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Required
+              </div>
+            </div>
+            <div class="form-group col-12 col-lg-6">
+              <label for="inputRecAmount">Country</label>
+                <select class="custom-select select" required>
+                  <option value="" selected disabled hidden>Any country</option>
+                  <option value="1">United States</option>
+                  <option value="2">Canada</option>
+                </select>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Options -->
+      <div class="card payment-card border-bottom-2">
+        <div class="card-header pt-4 pb-2">
+          <h4 class="card-title">Payment Options</h4>
+            <div class="paya-payment-options mt-4 px-0 pb-2" role="tablist">
+              <nav class="nav nav-pills flex-sm-row" id="paymentTabs" role="tablist">
+                <a class="flex-sm-fill text-sm-center nav-link active mr-2 mb-3 mb-lg-2" id="credit-tab" data-toggle="tab" href="#card-payment" role="tab" aria-controls="card-payment" aria-selected="true">Credit or Debit Card</a>
+                <a class="flex-sm-fill text-sm-center nav-link mb-3 mb-lg-2" id="bank-tab" data-toggle="tab" href="#bank-payment" role="tab" aria-controls="bank-payment" aria-selected="false">Bank Account</a>
+              </nav>
+              <!-- <nav class="nav nav-tabs flex-column flex-sm-row">
+                <a class="text-sm-left nav-link active" href="#">Credit or Debit Card</a>
+                <a class="text-sm-left nav-link" href="#">Bank Account</a>
+              </nav> -->
+            </div>
+          </div>
+
+        <div class="card-body pb-0">
+          <!-- Credit or Debit Card option -->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="card-payment" role="tabpanel" aria-labelledby="credit-tab">
+              <div class="paya form-row">
+                <div class="form-group col-12 col-lg-6 mb-2">
+                  <label for="inputCardNumber">Card</label>
+                  <div class="paya-card-brand">
+                    <span class="paya-card-icon"><img src="../img/cc-default.svg"></span>
+                    <input type="text" class="form-control input" id="inputCardNumber" maxlength="19" placeholder="1234 5678 9101 2345" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-6 col-lg-2 mb-2">
+                  <label for="inputCardNumber">Expiration</label>
+                  <input type="text" class="form-control input text-uppercase" id="inputExpiration" maxlength="5" placeholder="MM/YY" required>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Required
+                  </div>
+                </div>
+                <div class="form-group col-6 col-lg-4 mb-2">
+                  <label for="inputSecurity">Security Code (CVV)</label>
+                  <div class="paya-card-brand">
+                    <span class="paya-cvv-icon"><img src="../img/cvv-tooltip-inline.svg"></span>
+                    <input type="number" class="form-control input" id="inputCVV" maxlength="4" placeholder="1234" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bank Account (ACH) option -->
+            <div class="tab-pane fade" id="bank-payment" role="tabpanel" aria-labelledby="bank-tab">
+              <div class="form-row">
+                <div class="form-group col-12 col-lg-6 mb-2">
+                  <label class="paya-label" for="inputCardNumber">Account type</label>
+                  <div class="custom-control-spacer mx-0 mt-0 pt-2 px-0">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInlineChecking" name="customRadio" class="custom-control-input" required>
+                      <label class="custom-control-label" for="customRadioInlineChecking">Checking</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInlineSavings" name="customRadio" class="custom-control-input" required>
+                      <label class="custom-control-label" for="customRadioInlineSavings">Savings</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="paya form-row">
+                <div class="form-group col-12 col-lg-6">
+                  <label for="inputFn">Routing number</label>
+                  <input type="number" class="form-control input" id="inputFn" maxlength="13" placeholder="123 456 789" required>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Required
+                  </div>
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                  <span class="align-baseline">
+                    <img src="../img/ba-numbers.svg" />
+                  </span>
+                </div>
+              </div>
+              <div class="paya form-row">
+                <div class="form-group col-12 col-lg-6 mb-2">
+                  <label class="paya-label "for="inputCardNumber">Account number</label>
+                  <input type="number" class="form-control input" id="inputCardNumber" maxlength="16" placeholder="1234 5678 9101 2345" required>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Required
+                  </div>
+                </div>
+                <div class="form-group col-12 col-lg-6 mb-2">
+                  <label for="inputFn">Bank name</label>
+                  <input type="text" class="form-control input" id="inputFn" maxlength="13" placeholder="Bank" readonly>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12 mb-0 mt-3">
+                  <div>
+                    <div class="custom-control custom-checkbox">
+                      <div class="d-lg-flex justify-content-between">
+                        <input type="checkbox" class="custom-control-input" id="achChecks" required>
+                        <label class="custom-control-label font-weight-normal" for="achChecks">I agree to ACH Terms & Conditions</label>
+                        <a role="button" class="btn btn-link text-gray mr-3 p-0" id="toggleACH" data-toggle="collapse" data-target="#achTerms" aria-expanded="false" aria-controls="achTerms">Review</a>
+                      </div>
+                    </div>
+                    <!-- ACH Terms & Conditions -->
+                    <div class="collapse" id="achTerms">
+                      <p class="small text-muted ml-4 mr-md-4 mt-2 mb-0">By authorizing this transaction, customer agrees that merchant may convert this transaction into an Electronic Funds Transfer (EFT) transaction or paper draft, and to debit this account for the amount of the transaction. Additionally, in the event this draft or EFT is returned unpaid, a service fee, as allowable by law, will be charged to this account via EFT or draft. In the event you choose to revoke this authorization, please do so by contacting the merchant directly. Please note that processing times may not allow for revocation of this authorization.</p>
+                    </div>
+                    <hr class="mt-3 mb-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Switches -->
+        <div class="card-footer">
+          <!-- Save Payment Switch -->
+          <div class="d-flex flex-row">
+            <div class="col-9 col-lg-10 px-0">
+              Save payment option on file?
+            </div>
+            <div class="col-3 col-lg-2 pr-0 mr-0">
+              <div class="payaSwitch">
+                <input type="checkbox" name="payaSwitchSave" class="payaSwitchSave-checkbox" id="switchSave">
+                <label class="payaSwitchSave-label" for="switchSave"></label>
+              </div>
+            </div>
+          </div>
+          <hr class="mt-2 mb-3">
+          <!-- Recurring Switch -->
+          <div class="d-flex flex-row">
+            <div class="col-9 col-lg-10 px-0">
+              Setup a recurring payment?
+            </div>
+            <div class="col-3 col-lg-2 pr-0 mr-0">
+              <div class="payaSwitch">
+                <input type="checkbox" name="payaSwitchRec" class="payaSwitchRec-checkbox" id="switchRecurring" data-toggle="collapse" data-target="#recurringUI" aria-expanded="false" aria-controls="recurringUI">
+                <label class="payaSwitchRec-label" for="switchRecurring"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recurring UI -->
+        <div class="collapse" id="recurringUI">
+          <div class="card border-0 px-4">
+            <div class="card-body text-center mt-0 pt-0 px-0">
+              <div class="paya form-row text-left mt-2">
+                <div class="form-group col-6 col-lg-2">
+                  <label for="inputRecAmount">Amount</label>
+                  <input type="number" class="form-control input" id="inputRecAmount" maxlength="6" placeholder="$0.00" required>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Required
+                  </div>
+                </div>
+                <div class="form-group col-6 col-lg-4">
+                  <label for="inputRecAmount">Frequency</label>
+                  <select class="custom-select select" required>
+                      <option value="" selected disabled hidden>When...</option>
+                      <option value="1">Weekly</option>
+                      <option value="2">Monthly</option>
+                      <option value="3">Every 2 months</option>
+                      <option value="4">Quarterly</option>
+                      <option value="5">Every 6 months</option>
+                      <option value="6">Yearly</option>
+                    </select>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                </div>
+                <div class="form-group col-6 col-lg-3">
+                  <label for="inputRecAmount">From</label>
+                  <input type="text" class="form-control datetimepicker-input input" id="datetimepickerStart" data-toggle="datetimepicker" data-target="#datetimepickerStart" placeholder="Today" autocomplete="no" readonly required/>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Required
+                  </div>
+                </div>
+                <div class="form-group col-6 col-lg-3">
+                  <label for="inputRecAmount">To</label>
+                  <input type="text" class="form-control datetimepicker-input input" id="datetimepickerEnd" data-toggle="datetimepicker" data-target="#datetimepickerEnd" placeholder="No End Date" autocomplete="no" readonly required/>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Required
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /recurring -->
+      </div><!-- /payment options -->
+
+      <!-- Customer Information -->
+      <div class="card payment-card border-bottom-2">
+        <div class="card-header pt-4 pb-0">
+          <h4 class="card-title">Customer Information</h4>
+        </div>
+        <div class="card-body">
+          <div class="paya form-row">
+            <div class="form-group col-12 col-lg-6">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control input" id="inputEmail" placeholder="janedoe@gmail.com" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Required
+              </div>
+            </div>
+            <div class="form-group col-12 col-lg-6">
+              <label for="inputCardNumber">Phone number</label>
+              <input type="number" class="form-control input" id="inputPhone" placeholder="(703) 555-1212" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Required
+              </div>
+            </div>
+          </div>
+          <!-- Specific ACH Customer Information -->
+          <div class="collapse show" id="achUI" data-parent="#bank-payment">
+            <div class="paya form-row">
+              <div class="form-group col-md-4">
+                <label for="inputDrivers">Driver's License No.</label>
+                <input type="text" class="form-control input" id="inputDrivers" placeholder="A12345678" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+              </div>
+              <div class="form-group col-6 col-md-2">
+                <label for="inputDriversState">State</label>
+                <input type="text" class="form-control input text-uppercase" id="inputDriversState" maxlength="2" placeholder="VA" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+              </div>
+              <div class="form-group col-6 col-md-3">
+                <label for="inputDob">Date of birth</label>
+                <input type="number" class="form-control input" id="inputDob" maxlength="5" placeholder="11/06/85" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+              </div>
+              <div class="form-group col-12 col-lg-3">
+                <label for="inputSSN">Social Security No.</label>
+                <input type="number" class="form-control input" id="inputSSN" placeholder="123-45-6789" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shipping Details -->
+      <div class="card payment-card">
+        <div class="card-header pt-4 pb-0">
+          <h4 class="card-title">Shipping Details</h4>
+        </div>
+        <div class="card-body pb-2">
+          <div class="d-flex flex-row">
+            <div class="col-9 col-lg-10 px-0">
+              Same as Billing address?
+            </div>
+            <div class="col-3 col-lg-2 pr-0 mr-0">
+              <div class="payaSwitch">
+                <input type="checkbox" name="payaSwitchShip" class="payaSwitchShip-checkbox" id="switchShipping" data-toggle="collapse" data-target="#shippingUI" aria-expanded="false" aria-controls="shippingUI">
+                <label class="payaSwitchShip-label" for="switchShipping"></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping UI -->
+          <div class="collapse show" id="shippingUI">
+          <hr>
+            <div class="paya form-row">
+              <div class="paya form-group col-12 col-md-6">
+                <label for="inputAddr">Address</label>
+                <input type="text" class="form-control input" id="inputAddr1" placeholder="123 Anystreet" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+              </div>
+              <div class="form-group col-12 col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control input" id="inputCity" placeholder="Anytown" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+              </div>
+            </div>
+            <div class="paya form-row">
+              <div class="form-group col-6 col-md-3">
+                <label for="inputState">State</label>
+                <input type="text" class="form-control input text-uppercase" id="inputState" maxlength="2" placeholder="AL" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+              </div>
+              <div class="form-group col-6 col-md-3">
+                <label for="inputZip">Zip Code</label>
+                <input type="number" class="form-control input" id="inputZip" maxlength="5" placeholder="12345" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Required
+                </div>
+              </div>
+              <div class="form-group col-12 col-lg-6">
+                <label for="inputRecAmount">Country</label>
+                  <select class="custom-select select" required>
+                    <option value="" selected disabled hidden>Any country</option>
+                    <option value="1">United States</option>
+                    <option value="2">Canada</option>
+                  </select>
+                  <div class="invalid-feedback" style="width: 100%;">
+                    Required
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="black-rule-2">
+      <div class="transactions">
+        <ul class="paya list-group mx-3 my-4">
+          <li class="list-group-item d-flex justify-content-between align-items-center text-muted">
+            <a role="button" class="btn btn-outline-secondary" href="../index.html">Cancel</a>
+            <!-- <button type="submit" id="submit" class="btn btn-success">Pay $40.00</button> -->
+            <a role="button" class="btn btn-success" href="../receipt/index.html">Pay $40.00</a>
+
+          </li>
+        </ul>
+      </div>
+    </div> <!-- /col -->
+
+  </div><!-- /row -->
+</div><!-- /container -->
+</form>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../js/vendor/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/vendor/holder.min.js"></script>
+<script src="../js/util.js"></script>
+<script src="../js/moment.js"></script>
+<script src="../js/en-gb.js"></script>
+<script src="../js/datepicker.js"></script>
+<script src="../js/paya.js"></script>
+
+</body>
+</html>

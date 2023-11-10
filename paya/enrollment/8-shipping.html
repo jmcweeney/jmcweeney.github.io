@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Shipping Information</title>
+
+    <!-- Bootstrap core CSS, Google Font & custom Paya CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="../css/paya.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header class="navbar navbar-light bg-light flex-row bd-navbar justify-content-between sticky-top py-1 p-md-3">
+      <a href="index.html" class="sidebar-brand img-responsive ml-lg-3">
+        <span class="sidebar-brand-icon d-flex align-items-center">
+          <img src="../img/paya-logo.png">
+          <img class="co-brand-spacer" src="../img/logo-spacer.png">
+          <img class="co-brand" src="../img/partner-logo-isite.svg">
+        </span>
+      </a>
+      <div class="progress w-25 mr-lg-3">
+        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h2 class="pb-2">Tell us where to ship your POS hardware</h2>
+          <h5 class="lead text-gray">Shipping is typically 5-7 business days. You can key in payments using <span>the Virutal Terminal until your terminal arrives.</span></h5>
+        </div>
+      </section>
+
+      <div class="pt-1 pb-4">
+        <div class="container px-0">
+
+          <div class="d-flex justify-content-center">
+
+            <div class="paya-cards col-md-10 col-lg-7">
+              <div class="card payment-card">
+                <div class="card-body mt-md-4 mb-2">
+                  <div class="paya form-row">
+                    <div class="form-group col-12">
+                      <label for="inputName">Legal name</label>
+                      <input type="text" class="form-control input" id="inputLegalName" placeholder="Jane Doe" required autofocus>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12">
+                      <label for="inputAddr">Home address</label>
+                      <input type="text" class="form-control input" id="inputHomeAddr" placeholder="123 Anystreet" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="paya form-row">
+                    <div class="form-group col-12 col-md-6">
+                      <label for="inputZip">City</label>
+                      <input type="number" class="form-control input" id="inputCity" placeholder="Anytown" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-6 col-md-2">
+                      <label for="inputState">State</label>
+                      <input type="text" class="form-control input text-uppercase" id="inputState" maxlength="2" placeholder="AL" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-6 col-md-4">
+                      <label for="inputZip">Zip Code</label>
+                      <input type="number" class="form-control input" id="inputZip" maxlength="5" placeholder="12345" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                  </div>
+                  <div class="paya form-row">
+                    <div class="form-group col-12 col-md-6">
+                      <label for="inputZip">Phone number</label>
+                      <input type="number" class="form-control input" id="inputPhone" placeholder="(703) 555-1212" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-6">
+                      <label for="inputState">Package tracking</label>
+                      <input type="text" class="form-control input" id="inputEquity" placeholder="Email address for tracking details" required>
+                      <div class="invalid-feedback" style="width: 100%;">
+                        Required
+                      </div>
+                    </div>
+                    <div class="mt-4 ml-0 ml-md-1 mb-4">
+                      <h5 class="mb-3">Hardware:</h5>
+                      <img src="../img/sample-terminal.png">
+                      <span class="paya-edit-icon">
+                        <a href="#" class="float-right ml-3" data-toggle="tooltip" data-placement="top" title="Edit"><img src="../img/edit-rev.svg"></a>
+                      </span>
+                    </div>
+                  </div>
+                  <hr class="black-rule-1">
+                  <div class="paya d-flex justify-content-between mt-4 mb-3">
+                    <a role="button" class="btn btn-outline-secondary" href="7-ach.html">Back</a>
+                    <a role="button" class="btn btn-primary" href="9-review.html">Continue</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../js/vendor/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/vendor/holder.min.js"></script>
+    <script src="../js/modernizr.min.js"></script>
+    <script src="../js/dots.js"></script>
+    <script src="../js/paya.js"></script>
+
+  </body>
+</html>

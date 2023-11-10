@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Bank Account</title>
+
+    <!-- Bootstrap core CSS, Google Font & custom Paya CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="../css/paya.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header class="navbar navbar-light bg-light flex-row bd-navbar justify-content-between sticky-top py-1 p-md-3">
+      <a href="index.html" class="sidebar-brand img-responsive ml-lg-3">
+        <span class="sidebar-brand-icon d-flex align-items-center">
+          <img src="../img/paya-logo.png">
+          <img class="co-brand-spacer" src="../img/logo-spacer.png">
+          <img class="co-brand" src="../img/partner-logo-isite.svg">
+        </span>
+      </a>
+      <div class="progress w-25 mr-lg-3">
+        <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </header>
+
+    <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h2 class="pb-2">Link your bank account.</h2>
+        <h5 class="lead text-gray">This will allow us to deposit the funds you receive from card payments. <span>Once your account is verified, card payments are deposited in 1 to 2 business days.</span></h5>
+      </div>
+    </section>
+
+    <form action="7-ach.html" method="post" class="needs-validation" novalidate>
+
+    <div class="pt-1 pb-4 mb-4">
+      <div class="container px-0">
+
+        <div class="d-flex justify-content-center">
+          <div class="paya-cards col-md-10 col-lg-7">
+            <div class="card payment-card">
+              <div class="card-body mt-md-4 mb-2">
+
+                <div class="paya form-row">
+                  <div class="form-group col-12 col-md-6">
+                    <label for="inputFn">Routing number</label>
+                    <input type="number" class="form-control input" id="inputFn" maxlength="13" placeholder="123 456 789" required autofocus>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                  <div class="form-group col-12 col-md-6">
+                    <span class="align-baseline">
+                      <img class="w-100" src="../img/ba-numbers.svg" />
+                    </span>
+                  </div>
+                </div>
+                <div class="paya form-row">
+                  <div class="form-group col-12 col-md-6 mb-2">
+                    <label class="paya-label "for="inputCardNumber">Account number</label>
+                    <input type="number" class="form-control input" id="inputCardNumber" maxlength="16" placeholder="1234 5678 9101 2345" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                  <div class="form-group col-12 col-md-6 mb-3">
+                    <label class="paya-label "for="inputCardNumber">Re-enter Account number</label>
+                    <input type="number" class="form-control input" id="inputCardNumber" maxlength="16" placeholder="1234 5678 9101 2345" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                </div>
+                <div class="paya form-row">
+                  <div class="form-group col-12 mb-3">
+                    <label class="paya-label "for="inputBank">Bank name</label>
+                    <input type="text" class="form-control input" id="inputBank" placeholder="Any Bank" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Required
+                    </div>
+                  </div>
+                </div>
+                <hr class="black-rule-1">
+
+                <div class="paya d-flex justify-content-between mt-4 mb-3">
+                  <a role="button" class="btn btn-outline-secondary" href="5-details.html">Back</a>
+                  <!-- <button type="submit" id="submit" class="btn btn-primary">Continue</button> -->
+                  <a role="button" class="btn btn-primary" href="7-ach.html">Continue</a>
+
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../js/vendor/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/vendor/holder.min.js"></script>
+    <script src="../js/modernizr.min.js"></script>
+    <script src="../js/paya.js"></script>
+
+  </body>
+</html>

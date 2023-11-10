@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../img/favicon.ico">
+
+  <title>Paya Transaction Receipt</title>
+
+  <!-- Bootstrap core CSS & custom Paya CSS -->
+  <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,800,400italic" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="../css/paya.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="sticky-top pt-3 pl-3 border-bottom-none">
+  <a class="modal-prev-arrow" href="../index.html" role="button" data-slide="prev"><span>&larr;</span></a>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center my-3 my-lg-5">
+  <div class="col-12 col-md-5 col-lg-5">
+      <div class="transactions">
+        <div class="card-header text-center pt-4 pb-0">
+          <span class="receipt-circle-success mx-auto">
+            <img src="../img/check.svg">
+          </span>
+          <h2 class="my-4">Transaction Approved</h2>
+          <p class="text-muted mb-1">Approval Code: <span>12345</span></p>
+          <p class="text-muted mb-4">Transaction ID: <a href="../payments/index.html">938-0384-003</a></p>
+          <hr class="black-rule-1">
+        </div>
+        <div class="card-body mb-3 pt-0">
+          <form action="../index.html" method="post">
+          <p class="font-weight-bold mb-2">Billing Information</p>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Melissa Perosi
+              <span>Mar 29, 2018</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              266 Pacific Ave
+              <span>11:39 AM</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Staten Island, NY, 10312
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              melissa.perosi@gmail.com
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              (718) 555-1212
+            </li>
+          </ul>
+          <hr>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center font-weight-medium">
+              Method of payment
+              <span>VISA 5489</span>
+            </li>
+          </ul>
+          <hr class="black-rule-1">
+          <p class="font-weight-bold mb-2">Recurring Payment</p>
+          <ul class="list-group text-muted">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Amount
+              <span>$20.00</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Frequency
+              <span>Monthly</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Starts 08/12/18
+              <span>Ends 08/12/19</span>
+            </li>
+          </ul>
+          <hr class="black-rule-1">
+          <p class="font-weight-bold mb-2">Shipping Information</p>
+          <ul class="list-group text-muted">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Shipping address
+              <span>Same as billing</span>
+            </li>
+          </ul>
+          <hr class="black-rule-1">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center font-weight-bold">
+              Total
+              <span>$40.00</span>
+            </li>
+          </ul>
+          <hr class="black-rule-2">
+          <ul class="list-group text-gray">
+            <li class="list-group-item d-flex align-items-center font-weight-bold mb-2">
+              Merchant Copy
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Entry type:
+              <span class="ml-2">Swiped</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Response:
+              <span class="ml-2">Approved</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Auto Code:
+              <span class="ml-2">924-443-22</span>
+            </li>
+          </ul>
+          <hr>
+          <p class="card-text font-weight-medium text-gray mb-2">EMV Details</p>
+          <ul class="list-group text-gray">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              AID:
+              <span class="ml-2">4F *</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              TVR:
+              <span class="ml-2">85</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              IAD:
+              <span class="ml-2">9F10</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              TSI:
+              <span class="ml-2">9B</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              ARC:
+              <span class="ml-2">8A</span>
+            </li>
+          </ul>
+          <hr>
+        </div>
+      </form>
+      </div>
+    </div><!-- /col -->
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../js/vendor/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/vendor/holder.min.js"></script>
+<script src="../js/paya.js"></script>
+</body>
+</html>
