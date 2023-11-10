@@ -501,7 +501,7 @@ small,
       display: block;
       &::before {
         content: attr(data-text);
-        background: black;
+        background: transparent;
         padding: 1px 8px;
       }
     }
