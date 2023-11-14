@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Geron Gradient</title>
+        <script src="style.css" ></script>
+        <script src="gradient.js" ></script>
+
+    </head>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+        }
+
+        /* Blue to Light Blue */
+        /* #gradient-canvas {
+            --gradient-color-1: #005EB8;
+            --gradient-color-2: #05C3DD;
+        } */
+
+        /* Dark Blue to Purple */
+        /* #gradient-canvas {
+             --gradient-color-1: #003B5C;
+            --gradient-color-2: #8F1A95;
+        } */
+
+        /* Blue to Purple */
+        /* #gradient-canvas {
+             --gradient-color-1: #005EB8;
+            --gradient-color-2: #8F1A95;
+        } */
+
+        /* Purple to Red */
+        #gradient-canvas {
+             --gradient-color-1: #8F1A95;
+            --gradient-color-2: #F9423A;
+        }
+
+        /* Red to Gold */
+        /* #gradient-canvas {
+             --gradient-color-1: #F9423A;
+            --gradient-color-2: #FFA400;
+        } */
+
+        /* Dark Blue / Blue / Purple / Gold */
+        /* #gradient-canvas {
+            --gradient-color-1: #003B5C;
+            --gradient-color-2: #05C3DD;
+            --gradient-color-3: #8F1A95;
+            --gradient-color-4: #FFA400;
+        } */
+
+        /* ----- Full Palette ----- */
+        /* #005EB8; */
+        /* #003B5C; */
+        /* #05C3DD; */
+        /* #FFA400; */
+        /* #8F1A95; */
+        /* #F9423A; */
+        /* #D0D0CE; */
+
+    </style>
+    <body>
+        <canvas id="gradient-canvas" style="width:100vw;height:100vh"></canvas>
+        <script>
+            var gradient = new Gradient()
+            gradient.initGradient('#gradient-canvas');
+        </script>
+        <!-- <section class="section_top">
+            <div class="section-container">
+                <div class="section-layout-container container-medium with-padding">
+                    <div class="section-layout">
+                        <div class="gradient-area">
+                            <div class="gradient-title-area">
+                            <h1 class="text text-above section-title-1">Geron</h1>
+                            <div  class="section_background-wrap">
+                                <canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
+                            </div>
+                            <div class="text text-under text-under-blended section-title-1"><?= $title ?></div>
+                            <div class="text text-under text-under-overlay section-title-1"><?= $title ?></div>
+                            </div>
+                        </div>
+                        <h2 class="section-title-2 subtitle"><?= get_field("subtitle")?></h2>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </body>
+</html>
