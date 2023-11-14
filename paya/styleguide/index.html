@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paya Style Guide</title>
+    <title>Responsive Image Display</title>
     <style>
-        svg {
-            width: 100%;
-            height: auto; /* optional, ensures the aspect ratio is maintained */
+        img {
+            width: 100vw; /* Image width is 100% of the viewport width */
+            height: auto; /* Maintains the aspect ratio of the image */
+            max-width: 100%; /* Prevents the image from exceeding the width of its container */
         }
     </style>
 </head>
 <body>
-    <img src="paya-styleguide-v1.svg" alt="Styleguide Graphic" />
-    <!-- SVG Inline Example -->
-    <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-    </svg> -->
 
-    <!-- OR SVG from an external file -->
-    <!-- <img src="path-to-your-svg-file.svg" alt="Description of SVG"> -->
+    <!-- Image Example -->
+    <img src="paya-styleguide-v1.svg" alt="Style guide graphic" />
 
 </body>
 </html>
