@@ -1,0 +1,55 @@
+/* ----- Stylecode */
+
+.Bold{
+    font-weight: bold;
+}
+.Italics{
+    font-style: italic;
+}
+.Underline{
+    text-decoration: underline;
+}
+.Emphasis{
+    font-weight: bold;
+    font-style: italic;
+}
+.Lrule{
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+.Rrule{
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+.Toprule{
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+.Botrule{
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+.Arabic{
+    list-style: arabic;
+}
+.LittleRoman{
+    list-style: lower-roman;
+}
+.BigRoman{
+    list-style: upper-roman;
+}
+.LittleAlpha{
+    list-style: lower-alpha;
+}
+.BigAlpha{
+    list-style: upper-alpha
+}
+.Disc{
+    list-style: disc;
+}
+.Circle{
+    list-style: circle;
+}
+.Square{
+    list-style: square;
+}

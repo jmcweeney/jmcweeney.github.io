@@ -1,0 +1,15 @@
+/* --- Toggle Print */
+
+button,
+div.button,
+#buttontable {
+    display: none;
+}
+div.section-content {
+    display: block !important;
+}
+.print_visible {
+    display: block;
+    float: none;
+    margin-right: 0;
+}

@@ -1,0 +1,83 @@
+/* ----- Screen */
+
+#nav, #nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#nav li {
+    float: left;
+    width: 300px;
+}
+#nav ul {
+    position: absolute;
+    width: 300px;
+    left: -1000px;
+}
+#nav li ul li ul {
+    display: none;
+}
+
+#nav li ul li:hover > ul {
+    display: block;
+    position: absolute;
+    left: 50px !important;
+}
+#nav li ul li:hover > ul > li > a {
+    border: 1px solid #585858;
+}
+
+#nav li:hover ul, #nav li.ie_does_hover ul {
+    left: auto;
+    background-position: 0 0;
+}
+
+#nav * a {
+    display: block;
+    padding: 2px 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+#nav ul * a {
+    font-weight: bold;
+    color: #585858;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+#nav ul ul a:link, #nav ul ul a:visited {
+    font-weight: normal;
+    color: #585858;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+#nav * li a:hover, #nav * li a:active,
+#nav * li * li a:hover, #nav * li * li a:active {
+    /*font-weight: normal;*/
+    color: white;
+    background-color: #585858;
+    cursor: pointer;
+}
+
+#nav * li {
+    border-left: 2px solid white;
+}
+
+#nav * ul li {
+    border-top: 2px solid white;
+    border-left: 0;
+}
+
+/* IE only hack */
+* html ul li, * html ul ul li{
+    border-bottom: 2px solid white;
+}
+
+* html ul ul li{
+    border-top: 0;
+}
+/* End IE only hack */

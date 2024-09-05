@@ -1,0 +1,7 @@
+/* ----- Toggle Button */
+
+div.button.expandCollapse {
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
