@@ -1,0 +1,329 @@
+/*
+Updated by Jeff McWeeney
+jmcweeney@viveconcierge.next
+
+*/
+
+*{
+  font-family: Helvetica, Tahoma, sans-serif;
+  font-size: 11px;
+}
+body{
+  padding: 2px;
+  color: #003366;
+  background-color: white;
+  font-size: 12px;
+}
+#documentheader,
+#documentbody,
+#documentfooter{
+  width: 100%;
+}
+#documentheader{
+  border-bottom: 1px solid grey;
+  margin-bottom: 1em;
+}
+#documentfooter{
+  border-top: 1px solid grey;
+  margin-top: 1em;
+}
+a{
+  color: #003366;
+  background-color: white;
+}
+h1{
+  font-size: 40px;
+  font-weight: bold;
+}
+h1.title{
+  text-align: center;
+}
+h2{
+  font-size: 32px;
+  font-weight: bold;
+}
+h3{
+  font-size: 24px;
+  font-weight: bold;
+}
+h4{
+  font-size: 16px;
+  font-weight: bold;
+}
+h5{
+  font-size: 16px;
+  font-weight: bold;
+}
+h6{
+  font-size: 16px;
+  font-weight: bold;
+}
+hr{
+  width: 100%;
+}
+span {
+  font-size: 16px; /* IE8 hack: doesn't understand inheritance */
+  display: inline; /* IE8 hack: would go to next line otherwise */
+}
+table{
+  line-height: 10pt;
+  width: 100%;
+}
+thead tr, th{
+  background-color: LightGrey;
+}
+tbody tr{
+  background-color: #f2f2f2;
+}
+td{
+  font-size: 16px; /* IE8 hack: doesn't understand inheritance */
+  padding: 0.1cm 0.2cm;
+  vertical-align: top;
+}
+.table_simple{
+  width: auto;
+  color: inherit;
+  background-color: inherit;
+}
+.table_simple td{
+  padding: 0;
+}
+.table_simple td.td_label{
+  font-size: 16px; /* IE8 hack: doesn't understand inheritance */
+  font-weight: inherit;
+  font-style: italic;
+  padding-right: 0.2cm;
+}
+.header_table{
+  border: 1pt solid #00008b;
+}
+.narr_table{
+  width: 100%;
+  margin: 0.3em 0;
+}
+.narr_tr{
+  //background-color: #ffffcc;
+}
+.narr_th{
+  background-color: LightGrey;
+  font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+}
+.narr_footnote{
+  font-size: 8pt;
+  font-style: italic;
+}
+.td_label{
+  font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+  font-weight: bold;
+  background-color: LightGrey;
+}
+.td_label_width{
+  width: 20%;
+}
+.span_label{
+  font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+  font-weight: bold;
+}
+.span_value{
+  font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+  font-weight: normal;
+}
+.revision_insert{
+  text-decoration: underline overline;
+}
+.revision_insert_final{
+}
+.revision_delete{
+  text-decoration: line-through;
+}
+.revision_delete_final{
+  display: none;
+}
+.span_button {
+  display: table-cell;
+  cursor: pointer;
+  border: 2pt inset #585858;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  padding: 0.1cm 0.2cm;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  vertical-align: baseline;
+  width: 150px;
+}
+.warning-sign {
+  border: 1px solid red;
+  background-color: yellow;
+  margin: 1em 0.5em;
+}
+div.separator {
+  height: 1em;
+}
+div.caption {
+  font-weight: bold;
+  text-align: center;
+}
+
+<!-- Stylecode CSS -->
+
+.Bold{
+  font-weight: bold;
+}
+.Italics{
+  font-style: italic;
+}
+.Underline{
+  text-decoration: underline;
+}
+.Emphasis{
+  font-weight: bold;
+  font-style: italic;
+}
+.Lrule{
+  border-left-width: 2px;
+  border-left-style: solid;
+}
+.Rrule{
+  border-right-width: 2px;
+  border-right-style: solid;
+}
+.Toprule{
+  border-top-width: 2px;
+  border-top-style: solid;
+}
+.Botrule{
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+.Arabic{
+  list-style: arabic;
+}
+.LittleRoman{
+  list-style: lower-roman;
+}
+.BigRoman{
+  list-style: upper-roman;
+}
+.LittleAlpha{
+  list-style: lower-alpha;
+}
+.BigAlpha{
+  list-style: upper-alpha
+}
+.Disc{
+  list-style: disc;
+}
+.Circle{
+  list-style: circle;
+}
+.Square{
+  list-style: square;
+}
+
+/* -- Section Button Toggle CSS */
+
+div.button.expandCollapse {
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* -- Revision Toggle CSS */
+
+button,
+div.button,
+#buttontable {
+  display: none;
+}
+div.section-content {
+  display: block !important;
+}
+.print_visible {
+  display: block;
+  float: none;
+  margin-right: 0;
+}
+
+/* -- Table of Contents CSS */
+
+#nav, #nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#nav li {
+  float: left;
+  width: 300px;
+}
+#nav ul {
+  position: absolute;
+  width: 300px;
+  left: -1000px;
+}
+#nav li ul li ul {
+  display: none;
+}
+
+#nav li ul li:hover > ul {
+  display: block;
+  position: absolute;
+  left: 50px !important;
+}
+#nav li ul li:hover > ul > li > a {
+  border: 1px solid #585858;
+}
+
+#nav li:hover ul, #nav li.ie_does_hover ul {
+  left: auto;
+  background-position: 0 0;
+}
+
+#nav * a {
+  display: block;
+  padding: 2px 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+#nav ul * a {
+  font-weight: bold;
+  color: #585858;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+#nav ul ul a:link, #nav ul ul a:visited {
+  font-weight: normal;
+  color: #585858;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+#nav * li a:hover, #nav * li a:active,
+#nav * li * li a:hover, #nav * li * li a:active {
+  /*font-weight: normal;*/
+  color: white;
+  background-color: #585858;
+  cursor: pointer;
+}
+
+#nav * li {
+  border-left: 2px solid white;
+}
+
+#nav * ul li {
+  border-top: 2px solid white;
+  border-left: 0;
+}
+
+/* IE only hack */
+* html ul li, * html ul ul li{
+  border-bottom: 2px solid white;
+}
+
+* html ul ul li{
+  border-top: 0;
+}
+/* End IE only hack */

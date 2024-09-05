@@ -1,854 +1,535 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!-- saved from url=(0058)file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-      <title>C-CDA R2.1 Patient Record: Kelli Fritsch (December 14, 2020, 08:23:48AM)</title>
-      <!-- General CSS -->
-      <style type="text/css" media="all">
-                    *{
-                        font-family: Helvetica, Tahoma, sans-serif;
-                        font-size: 11px;
-                    }
-                    body{
-                        padding: 2px;
-                        color: #003366;
-                        background-color: white;
-                        font-size: 12px;
-                    }
-                    #documentheader,
-                    #documentbody,
-                    #documentfooter{
-                        width: 100%;
-                    }
-                    #documentheader{
-                        border-bottom: 1px solid grey;
-                        margin-bottom: 1em;
-                    }
-                    #documentfooter{
-                        border-top: 1px solid grey;
-                        margin-top: 1em;
-                    }
-                    a{
-                        color: #003366;
-                        background-color: white;
-                    }
-                    h1{
-                        font-size: 40px;
-                        font-weight: bold;
-                    }
-                    h1.title{
-                        text-align: center;
-                    }
-                    h2{
-                        font-size: 32px;
-                        font-weight: bold;
-                    }
-                    h3{
-                        font-size: 24px;
-                        font-weight: bold;
-                    }
-                    h4{
-                        font-size: 16px;
-                        font-weight: bold;
-                    }
-                    h5{
-                        font-size: 16px;
-                        font-weight: bold;
-                    }
-                    h6{
-                        font-size: 16px;
-                        font-weight: bold;
-                    }
-                    hr{
-                        width: 100%;
-                    }
-                    span {
-                        font-size: 16px; /* IE8 hack: doesn't understand inheritance */
-                        display: inline; /* IE8 hack: would go to next line otherwise */
-                    }
-                    table{
-                        line-height: 10pt;
-                        width: 100%;
-                    }
-                    thead tr, th{
-                        background-color: LightGrey;
-                    }
-                    tbody tr{
-                        background-color: #f2f2f2;
-                    }
-                    td{
-                        font-size: 16px; /* IE8 hack: doesn't understand inheritance */
-                        padding: 0.1cm 0.2cm;
-                        vertical-align: top;
-                    }
-                    .table_simple{
-                        width: auto;
-                        color: inherit;
-                        background-color: inherit;
-                    }
-                    .table_simple td{
-                        padding: 0;
-                    }
-                    .table_simple td.td_label{
-                        font-size: 16px; /* IE8 hack: doesn't understand inheritance */
-                        font-weight: inherit;
-                        font-style: italic;
-                        padding-right: 0.2cm;
-                    }
-                    .header_table{
-                        border: 1pt solid #00008b;
-                    }
-                    .narr_table{
-                        width: 100%;
-                        margin: 0.3em 0;
-                    }
-                    .narr_tr{
-                        //background-color: #ffffcc;
-                    }
-                    .narr_th{
-                        background-color: LightGrey;
-                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
-                    }
-                    .narr_footnote{
-                        font-size: 8pt;
-                        font-style: italic;
-                    }
-                    .td_label{
-                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
-                        font-weight: bold;
-                        background-color: LightGrey;
-                    }
-                    .td_label_width{
-                        width: 20%;
-                    }
-                    .span_label{
-                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
-                        font-weight: bold;
-                    }
-                    .span_value{
-                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
-                        font-weight: normal;
-                    }
-                    .revision_insert{
-                        text-decoration: underline overline;
-                    }
-                    .revision_insert_final{
-                    }
-                    .revision_delete{
-                        text-decoration: line-through;
-                    }
-                    .revision_delete_final{
-                        display: none;
-                    }
-                    .span_button {
-                        display: table-cell;
-                        cursor: pointer;
-                        border: 2pt inset #585858;
-                        border-radius: 15px;
-                        -moz-border-radius: 15px;
-                        padding: 0.1cm 0.2cm;
-                        background-color: #f2f2f2;
-                        font-weight: bold;
-                        vertical-align: baseline;
-                        width: 150px;
-                    }
-                    .warning-sign {
-                        border: 1px solid red;
-                        background-color: yellow;
-                        margin: 1em 0.5em;
-                    }
-                    div.separator {
-                        height: 1em;
-                    }
-                    div.caption {
-                        font-weight: bold;
-                        text-align: center;
-                    }
-                </style>
-      <!-- Stylecode CSS -->
-      <style type="text/css" media="all">
-                    .Bold{
-                        font-weight: bold;
-                    }
-                    .Italics{
-                        font-style: italic;
-                    }
-                    .Underline{
-                        text-decoration: underline;
-                    }
-                    .Emphasis{
-                        font-weight: bold;
-                        font-style: italic;
-                    }
-                    .Lrule{
-                        border-left-width: 2px;
-                        border-left-style: solid;
-                    }
-                    .Rrule{
-                        border-right-width: 2px;
-                        border-right-style: solid;
-                    }
-                    .Toprule{
-                        border-top-width: 2px;
-                        border-top-style: solid;
-                    }
-                    .Botrule{
-                        border-bottom-width: 2px;
-                        border-bottom-style: solid;
-                    }
-                    .Arabic{
-                        list-style: arabic;
-                    }
-                    .LittleRoman{
-                        list-style: lower-roman;
-                    }
-                    .BigRoman{
-                        list-style: upper-roman;
-                    }
-                    .LittleAlpha{
-                        list-style: lower-alpha;
-                    }
-                    .BigAlpha{
-                        list-style: upper-alpha
-                    }
-                    .Disc{
-                        list-style: disc;
-                    }
-                    .Circle{
-                        list-style: circle;
-                    }
-                    .Square{
-                        list-style: square;
-                    }</style>
-      <!-- Section Button Toggle CSS -->
-      <style type="text/css" media="screen">
-                    div.button.expandCollapse {
-                        float: left;
-                        margin-right: 10px;
-                        cursor: pointer;
-                    }
-                </style>
-      <!-- Revision Toggle CSS -->
-      <style type="text/css" media="print">
-                    button,
-                    div.button,
-                    #buttontable {
-                        display: none;
-                    }
-                    div.section-content {
-                        display: block !important;
-                    }
-                    .print_visible {
-                        display: block;
-                        float: none;
-                        margin-right: 0;
-                    }
-                </style>
-      <!-- Table of Contents CSS -->
-      <style type="text/css" media="screen">
-                    #nav, #nav ul {
-                        padding: 0;
-                        margin: 0;
-                        list-style: none;
-                    }
+<title>Patient Record: Kelli Fritsch</title>
 
-                    #nav li {
-                        float: left;
-                        width: 300px;
-                    }
-                    #nav ul {
-                        position: absolute;
-                        width: 300px;
-                        left: -1000px;
-                    }
-                    #nav li ul li ul {
-                        display: none;
-                    }
+<link rel="stylesheet" href="css/main.css">
 
-                    #nav li ul li:hover > ul {
-                        display: block;
-                        position: absolute;
-                        left: 50px !important;
-                    }
-                    #nav li ul li:hover > ul > li > a {
-                        border: 1px solid #585858;
-                    }
+<!-- Javascript for Revisions switch -->
+<script type="text/javascript">var gStringCollapse = "Collapse"; var gStringExpand = "Expand";
+function expandAllSections() {
+var toggleButtons = document.getElementsByClassName("expandCollapse");
+if (toggleButtons != null) {
+    var i = 0;
+    while (i != toggleButtons.length) {
+        expandSection(toggleButtons[i]);
+        i++;
+    }
+}
+toggle('sectionsToggleExpand');
+toggle('sectionsToggleCollapse');
+}
+function expandSection(sectionTitleButton) {
+sectionTitleButton.title = gStringCollapse;
+sectionTitleButton.innerText = '▼';
+sectionTitleButton.onclick = function (){collapseSection(this);};
+var sectionContent = sectionTitleButton.parentElement.parentElement.children[1]
+if (sectionContent != null) {
+    sectionContent.style.display = '';
+}
+}
+function collapseAllSections() {
+var toggleButtons = document.getElementsByClassName("expandCollapse");
+if (toggleButtons != null) {
+    var i = 0;
+    while (i != toggleButtons.length) {
+        collapseSection(toggleButtons[i]);
+        i++;
+    }
+}
+toggle('sectionsToggleExpand');
+toggle('sectionsToggleCollapse');
+}
+function collapseSection(sectionTitleButton) {
+sectionTitleButton.title = gStringExpand;
+sectionTitleButton.innerText = '▶';
+sectionTitleButton.onclick = function (){expandSection(this);};
+var sectionContent = sectionTitleButton.parentElement.parentElement.children[1]
+if (sectionContent != null) {
+    sectionContent.style.display = 'none';
+}
+}
+function showReviewMarks() {
+var allHTMLTags=document.getElementsByTagName("*");
+for (i in allHTMLTags) {
+    //Get all tags with the specified class name.
+    if (allHTMLTags[i].className=='revision_insert_final') {
+        allHTMLTags[i].className = 'revision_insert';
+    }
+    if (allHTMLTags[i].className=='revision_delete_final') {
+        allHTMLTags[i].className = 'revision_delete';
+    }
+}
+toggle('revisionToggleOn');
+toggle('revisionToggleOff');
+}
+function hideReviewMarks() {
+var allHTMLTags=document.getElementsByTagName("*");
+for (i in allHTMLTags) {
+    //Get all tags with the specified class name.
+    if (allHTMLTags[i].className=='revision_insert') {
+        allHTMLTags[i].className = 'revision_insert_final';
+    }
+    if (allHTMLTags[i].className=='revision_delete') {
+        allHTMLTags[i].className = 'revision_delete_final';
+    }
+}
+toggle('revisionToggleOn');
+toggle('revisionToggleOff');
+}
+function toggle(obj) {
+var el = document.getElementById(obj);
+el.style.display = (el.style.display != 'none' ? 'none' : '' );
+}
+</script>
+<!-- Javascript for Table of Contents menu -->
+<script type="text/javascript">
+sfHover = function() {
+var sfEls = document.getElementById("nav").getElementsByTagName("li");
+for (i in sfEls) {
+    sfEls[i].onmouseover=function() {
+        this.className+=" ie_does_hover";
+    }
+    sfEls[i].onmouseout=function() {
+        this.className=this.className.replace(new RegExp(" ie_does_hover"), "");
+    }
+  }
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+</script>
 
-                    #nav li:hover ul, #nav li.ie_does_hover ul {
-                        left: auto;
-                        background-position: 0 0;
-                    }
-
-                    #nav * a {
-                        display: block;
-                        padding: 2px 8px;
-                        text-decoration: none;
-                        font-weight: bold;
-                        font-size: 11px;
-                    }
-
-                    #nav ul * a {
-                        font-weight: bold;
-                        color: #585858;
-                        background-color: #f2f2f2;
-                        cursor: pointer;
-                    }
-
-                    #nav ul ul a:link, #nav ul ul a:visited {
-                        font-weight: normal;
-                        color: #585858;
-                        background-color: #f2f2f2;
-                        cursor: pointer;
-                    }
-
-                    #nav * li a:hover, #nav * li a:active,
-                    #nav * li * li a:hover, #nav * li * li a:active {
-                        /*font-weight: normal;*/
-                        color: white;
-                        background-color: #585858;
-                        cursor: pointer;
-                    }
-
-                    #nav * li {
-                        border-left: 2px solid white;
-                    }
-
-                    #nav * ul li {
-                        border-top: 2px solid white;
-                        border-left: 0;
-                    }
-
-                    /* IE only hack */
-                    * html ul li, * html ul ul li{
-                        border-bottom: 2px solid white;
-                    }
-
-                    * html ul ul li{
-                        border-top: 0;
-                    }
-                    /* End IE only hack */
-                </style>
-      <!-- Javascript for Revisions switch -->
-      <script type="text/javascript">var gStringCollapse = "Collapse"; var gStringExpand = "Expand";
-                        function expandAllSections() {
-                            var toggleButtons = document.getElementsByClassName("expandCollapse");
-                            if (toggleButtons != null) {
-                                var i = 0;
-                                while (i != toggleButtons.length) {
-                                    expandSection(toggleButtons[i]);
-                                    i++;
-                                }
-                            }
-                            toggle('sectionsToggleExpand');
-                            toggle('sectionsToggleCollapse');
-                        }
-                        function expandSection(sectionTitleButton) {
-                            sectionTitleButton.title = gStringCollapse;
-                            sectionTitleButton.innerText = '▼';
-                            sectionTitleButton.onclick = function (){collapseSection(this);};
-                            var sectionContent = sectionTitleButton.parentElement.parentElement.children[1]
-                            if (sectionContent != null) {
-                                sectionContent.style.display = '';
-                            }
-                        }
-                        function collapseAllSections() {
-                            var toggleButtons = document.getElementsByClassName("expandCollapse");
-                            if (toggleButtons != null) {
-                                var i = 0;
-                                while (i != toggleButtons.length) {
-                                    collapseSection(toggleButtons[i]);
-                                    i++;
-                                }
-                            }
-                            toggle('sectionsToggleExpand');
-                            toggle('sectionsToggleCollapse');
-                        }
-                        function collapseSection(sectionTitleButton) {
-                            sectionTitleButton.title = gStringExpand;
-                            sectionTitleButton.innerText = '▶';
-                            sectionTitleButton.onclick = function (){expandSection(this);};
-                            var sectionContent = sectionTitleButton.parentElement.parentElement.children[1]
-                            if (sectionContent != null) {
-                                sectionContent.style.display = 'none';
-                            }
-                        }
-                        function showReviewMarks() {
-                            var allHTMLTags=document.getElementsByTagName("*");
-                            for (i in allHTMLTags) {
-                                //Get all tags with the specified class name.
-                                if (allHTMLTags[i].className=='revision_insert_final') {
-                                    allHTMLTags[i].className = 'revision_insert';
-                                }
-                                if (allHTMLTags[i].className=='revision_delete_final') {
-                                    allHTMLTags[i].className = 'revision_delete';
-                                }
-                            }
-                            toggle('revisionToggleOn');
-                            toggle('revisionToggleOff');
-                        }
-                        function hideReviewMarks() {
-                            var allHTMLTags=document.getElementsByTagName("*");
-                            for (i in allHTMLTags) {
-                                //Get all tags with the specified class name.
-                                if (allHTMLTags[i].className=='revision_insert') {
-                                    allHTMLTags[i].className = 'revision_insert_final';
-                                }
-                                if (allHTMLTags[i].className=='revision_delete') {
-                                    allHTMLTags[i].className = 'revision_delete_final';
-                                }
-                            }
-                            toggle('revisionToggleOn');
-                            toggle('revisionToggleOff');
-                        }
-                        function toggle(obj) {
-                            var el = document.getElementById(obj);
-                            el.style.display = (el.style.display != 'none' ? 'none' : '' );
-                        }
-                        </script>
-      <!-- Javascript for Table of Contents menu -->
-      <script type="text/javascript">
-                        sfHover = function() {
-                            var sfEls = document.getElementById("nav").getElementsByTagName("li");
-                            for (i in sfEls) {
-                                sfEls[i].onmouseover=function() {
-                                    this.className+=" ie_does_hover";
-                                }
-                                sfEls[i].onmouseout=function() {
-                                    this.className=this.className.replace(new RegExp(" ie_does_hover"), "");
-                                }
-                            }
-                        }
-                        if (window.attachEvent) window.attachEvent("onload", sfHover);
-                    </script>
-   </head>
-   <body>
-      <div id="documentheader">
-         <a id="_toc">&nbsp;</a>
-         <h1 class="title">C-CDA R2.1 Patient Record: Kelli Fritsch (December 14, 2020, 08:23:48AM)</h1>
-         <table class="header_table">
-            <tbody>
-               <tr>
-                  <td class="td_label">Patient</td>
-                  <td>
-                     <span class="span_value">Kelli FRITSCH</span>
-                     <span style="float: right; margin-left: 1em;">
-                        <span>
-                           <span class="span_label">Date of Birth: </span>
-                           <span class="span_value">January  1, 2007, 08:23:48AM<span title="At document creation time"> (13yr)</span>
-                           </span>
-                        </span>
-                        <span class="span_label">Gender: </span>
-                        <span class="span_value">F</span>
-                     </span>
-                     <span style="float: right;" class="print_visible">
-                        <span class="span_label">Patient-ID:&nbsp;</span>
-                        <span class="span_value">
-                           <span title="https://github.com/synthetichealth/synthea">3SxYKMydmRpoQgkYcd9x5Z (2.16.840.1.113883.19.5)</span>
-                        </span>
-                     </span>
-                  </td>
-               </tr>
-               <tr>
-                  <td class="td_label">Documentation&nbsp;Of</td>
-                  <td>Care provision, <span class="span_label">Date/Time: </span>
-                     <span class="span_value">from&nbsp;January  1, 2007, 08:23:48AM to&nbsp;December  14, 2020, 08:23:48AM</span>
-                  </td>
-               </tr>
-               <tr>
-                  <td class="td_label">Author</td>
-                  <td>
-                     <span class="span_value">https://github.com/synthetichealth/synthea</span>, <span class="span_label">Organization: </span>
-                     <span class="span_value">GROUP HEALTH COOPERATIVE OF SOUTH CENTRAL WISCONSIN</span>, <span class="span_label">Authored On: </span>
-                     <span class="span_value">December  14, 2020, 08:23:48AM</span>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-         <div id="buttontable">
-            <table border="0" cellpadding="0" cellspacing="0">
-               <tbody>
-                  <tr>
-                     <td style="width: 35%; background-color: white;">
-                        <ul id="nav">
-                           <li style="list-style: none;">
-                              <div class="span_button">Table of Contents&nbsp;∇</div>
-                              <ul>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_1">Allergies (no information)</a>
-                                 </li>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_2">Medications (no information)</a>
-                                 </li>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_3">Diagnostic Results (no information)</a>
-                                 </li>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_4">Problems (no information)</a>
-                                 </li>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_5">Procedures (no information)</a>
-                                 </li>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_6">Encounters</a>
-                                 </li>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_7">Vital Signs</a>
-                                 </li>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_8">Immunizations</a>
-                                 </li>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_9">Imaging Studies (no information)</a>
-                                 </li>
-                                 <li>
-                                    <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_10">Social History</a>
-                                 </li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </td>
-                     <td style="background-color: white;">
-                        <div id="sectionsToggleExpand" style="display: none;" class="span_button" onclick="expandAllSections();">Expand All</div>
-                        <div id="sectionsToggleCollapse" class="span_button" onclick="collapseAllSections();">Collapse All</div>
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-      </div>
-      <div id="documentbody">
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_1" title="Allergy List">Allergies</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>There are no current allergies at the time of this document's creation.</div>
-               </div>
-            </div>
-         </div>
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_2" title="History of medication use">Medications</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>There are no current medications at the time of this document's creation.</div>
-               </div>
-            </div>
-         </div>
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_3" title="Results">Diagnostic Results</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>There are no current results at the time of this document's creation.</div>
-               </div>
-            </div>
-         </div>
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_4" title="Problem List">Problems</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>There are no current problem concern acts at the time of this document's creation.</div>
-               </div>
-            </div>
-         </div>
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_5" title="Procedures">Procedures</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>There are no current procedures at the time of this document's creation.</div>
-               </div>
-            </div>
-         </div>
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_6" title="History of encounters">Encounters</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>
-                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%" border="1">
-                        <thead>
-                           <tr class="narr_tr">
-                              <th class="narr_th">Start</th>
-                              <th class="narr_th">Stop</th>
-                              <th class="narr_th">Description</th>
-                              <th class="narr_th">Code</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>2020-01-27T08:38:48-06:00</td>
-                              <td id="encounters-desc-1">Well child visit (procedure)</td>
-                              <td id="encounters-code-1">http://snomed.info/sct 410620009</td>
-                           </tr>
-                        </tbody>
-                     </table>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_7" title="Vital signs">Vital Signs</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>
-                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%" border="1">
-                        <thead>
-                           <tr class="narr_tr">
-                              <th class="narr_th">Start</th>
-                              <th class="narr_th">Stop</th>
-                              <th class="narr_th">Description</th>
-                              <th class="narr_th">Code</th>
-                              <th class="narr_th">Value</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="observations-desc-1">Body Height</td>
-                              <td id="observations-code-1">http://loinc.org 8302-2</td>
-                              <td>163.1 cm</td>
-                           </tr>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="observations-desc-2">Pain severity - 0-10 verbal numeric rating [Score] - Reported</td>
-                              <td id="observations-code-2">http://loinc.org 72514-3</td>
-                              <td>2 {score}</td>
-                           </tr>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="observations-desc-3">Body Weight</td>
-                              <td id="observations-code-3">http://loinc.org 29463-7</td>
-                              <td>47.1 kg</td>
-                           </tr>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="observations-desc-4">Body Mass Index</td>
-                              <td id="observations-code-4">http://loinc.org 39156-5</td>
-                              <td>17.7 kg/m2</td>
-                           </tr>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="observations-desc-5">Body mass index (BMI) [Percentile] Per age and gender</td>
-                              <td id="observations-code-5">http://loinc.org 59576-9</td>
-                              <td>34.44536499811594 %</td>
-                           </tr>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="observations-desc-6">Blood Pressure</td>
-                              <td id="observations-code-6">http://loinc.org 85354-9</td>
-                              <td>
-          Diastolic Blood Pressure 76 mm[Hg]
-          Systolic Blood Pressure 110 mm[Hg]
+</head>
+<body>
+  <div id="documentheader">
+  <a id="_toc">&nbsp;</a>
+  <h1 class="title">C-CDA R2.1 Patient Record: Kelli Fritsch (December 14, 2020, 08:23:48AM)</h1>
+  <table class="header_table">
+    <tbody>
+       <tr>
+          <td class="td_label">Patient</td>
+          <td>
+             <span class="span_value">Kelli FRITSCH</span>
+             <span style="float: right; margin-left: 1em;">
+                <span>
+                   <span class="span_label">Date of Birth: </span>
+                   <span class="span_value">January  1, 2007, 08:23:48AM<span title="At document creation time"> (13yr)</span>
+                   </span>
+                </span>
+                <span class="span_label">Gender: </span>
+                <span class="span_value">F</span>
+             </span>
+             <span style="float: right;" class="print_visible">
+                <span class="span_label">Patient-ID:&nbsp;</span>
+                <span class="span_value">
+                   <span title="https://github.com/synthetichealth/synthea">3SxYKMydmRpoQgkYcd9x5Z (2.16.840.1.113883.19.5)</span>
+                </span>
+             </span>
           </td>
-                           </tr>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="observations-desc-7">Heart rate</td>
-                              <td id="observations-code-7">http://loinc.org 8867-4</td>
-                              <td>60 /min</td>
-                           </tr>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="observations-desc-8">Respiratory rate</td>
-                              <td id="observations-code-8">http://loinc.org 9279-1</td>
-                              <td>14 /min</td>
-                           </tr>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="observations-desc-9">Tobacco smoking status NHIS</td>
-                              <td id="observations-code-9">http://loinc.org 72166-2</td>
-                              <td>system=http://snomed.info/sct, code=266919005, display=Never smoker, valueSet=null </td>
-                           </tr>
-                        </tbody>
-                     </table>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_8" title="History of immunizations">Immunizations</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>
-                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%" border="1">
-                        <thead>
-                           <tr class="narr_tr">
-                              <th class="narr_th">Start</th>
-                              <th class="narr_th">Stop</th>
-                              <th class="narr_th">Description</th>
-                              <th class="narr_th">Code</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="immunizations-desc-1">Influenza, seasonal, injectable, preservative free</td>
-                              <td id="immunizations-code-1">http://hl7.org/fhir/sid/cvx 140</td>
-                           </tr>
-                           <tr class="narr_tr">
-                              <td>2020-01-27T08:23:48-06:00</td>
-                              <td>
-                              </td><td id="immunizations-desc-2">HPV, quadrivalent</td>
-                              <td id="immunizations-code-2">http://hl7.org/fhir/sid/cvx 62</td>
-                           </tr>
-                        </tbody>
-                     </table>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_9" title="Diagnostic Imaging Report">Imaging Studies</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>There are no current imaging studies at the time of this document's creation.</div>
-               </div>
-            </div>
-         </div>
-         <div style="margin-left: 0em;" class="section">
-            <div class="section-title">
-               <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
-               <h3 id="section_10" title="29762-2">Social History</h3>
-            </div>
-            <div class="section-content">
-               <div class="section-body">
-                  <div>There is no current social history at the time of this document's creation.</div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div id="documentfooter">
-         <table class="header_table">
-            <tbody>
-               <tr>
-                  <td class="td_label td_label_width">Document</td>
-                  <td style="width: 30%;">
-                     <table class="table_simple">
-                        <tbody>
-                           <tr>
-                              <td class="td_label">ID</td>
-                              <td>
-                                 <span title="https://github.com/synthetichealth/synthea">17412c5c-d05c-8e61-e4d4-1efb575568dd (2.16.840.1.113883.19.5)</span>
-                              </td>
-                           </tr>
-                        </tbody>
-                     </table>
-                  </td>
-                  <td class="td_label td_label_width">Created On</td>
-                  <td>December  14, 2020, 08:23:48AM</td>
-               </tr>
-            </tbody>
-         </table>
-         <table class="header_table">
-            <tbody>
-               <tr>
-                  <td class="td_label td_label_width">Custodian</td>
-                  <td style="width: 30%;">GROUP HEALTH COOPERATIVE OF SOUTH CENTRAL WISCONSIN</td>
-                  <td class="td_label td_label_width">Contact Details</td>
-                  <td>3051 CAHILL MAIN<br>FITCHBURG, WI 53711-7109<br>
-                     <br>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-         <div class="separator">&nbsp;</div>
-         <table class="header_table">
-            <tbody>
-               <tr>
-                  <td class="td_label td_label_width">Patient</td>
-                  <td style="width: 30%;">Kelli FRITSCH</td>
-                  <td class="td_label td_label_width">Contact Details</td>
-                  <td style="width: 30%;">Home Primary: 853 Schinner Ramp<br>Madison, Wisconsin 53703<br>
-                     <br>
-                  </td>
-               </tr>
-               <tr>
-                  <td class="td_label td_label_width">Date of Birth</td>
-                  <td style="width: 30%;">January  1, 2007, 08:23:48AM (13yr)</td>
-                  <td class="td_label td_label_width">Gender</td>
-                  <td>F</td>
-               </tr>
-               <tr>
-                  <td class="td_label td_label_width">Race</td>
-                  <td style="width: 30%;">white</td>
-                  <td class="td_label td_label_width">Ethnicity</td>
-                  <td>non-hispanic</td>
-               </tr>
-               <tr>
-                  <td class="td_label td_label_width">Patient-IDs</td>
-                  <td>
-                     <span title="https://github.com/synthetichealth/synthea">3SxYKMydmRpoQgkYcd9x5Z (2.16.840.1.113883.19.5)</span>
-                  </td>
-                  <td class="td_label td_label_width">Language Communication</td>
-                  <td colspan="3">
-                     <div>en-US</div>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-         <div class="separator">&nbsp;</div>
-         <table class="header_table">
-            <tbody>
-               <tr>
-                  <td class="td_label td_label_width">Documentation&nbsp;Of - care provision</td>
-                  <td style="width: 80%;" colspan="3">from&nbsp;January  1, 2007, 08:23:48AM to&nbsp;December  14, 2020, 08:23:48AM</td>
-               </tr>
-            </tbody>
-         </table>
-         <div class="separator">&nbsp;</div>
-         <table class="header_table">
-            <tbody>
-               <tr>
-                  <td class="td_label td_label_width" rowspan="2">Author</td>
-                  <td style="width: 30%;" rowspan="2">https://github.com/synthetichealth/synthea, Organization: GROUP HEALTH COOPERATIVE OF SOUTH CENTRAL WISCONSIN</td>
-                  <td class="td_label td_label_width">Contact Details</td>
-                  <td>not applicable<br>
-                  </td>
-               </tr>
-               <tr>
-                  <td class="td_label td_label_width">Contact Details (Organization)</td>
-                  <td>3051 CAHILL MAIN<br>FITCHBURG, WI 53711-7109<br>
-                     <br>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-      </div>
+       </tr>
+       <tr>
+          <td class="td_label">Documentation&nbsp;Of</td>
+          <td>Care provision, <span class="span_label">Date/Time: </span>
+             <span class="span_value">from&nbsp;January  1, 2007, 08:23:48AM to&nbsp;December  14, 2020, 08:23:48AM</span>
+          </td>
+       </tr>
+       <tr>
+          <td class="td_label">Author</td>
+          <td>
+             <span class="span_value">https://github.com/synthetichealth/synthea</span>, <span class="span_label">Organization: </span>
+             <span class="span_value">GROUP HEALTH COOPERATIVE OF SOUTH CENTRAL WISCONSIN</span>, <span class="span_label">Authored On: </span>
+             <span class="span_value">December  14, 2020, 08:23:48AM</span>
+          </td>
+       </tr>
+    </tbody>
+  </table>
+  <div id="buttontable">
+    <table border="0" cellpadding="0" cellspacing="0">
+       <tbody>
+          <tr>
+             <td style="width: 35%; background-color: white;">
+                <ul id="nav">
+                   <li style="list-style: none;">
+                      <div class="span_button">Table of Contents&nbsp;∇</div>
+                      <ul>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_1">Allergies (no information)</a>
+                         </li>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_2">Medications (no information)</a>
+                         </li>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_3">Diagnostic Results (no information)</a>
+                         </li>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_4">Problems (no information)</a>
+                         </li>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_5">Procedures (no information)</a>
+                         </li>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_6">Encounters</a>
+                         </li>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_7">Vital Signs</a>
+                         </li>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_8">Immunizations</a>
+                         </li>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_9">Imaging Studies (no information)</a>
+                         </li>
+                         <li>
+                            <a href="file:///C:/Users/justk/AppData/Local/Temp/tmp2wcrz0kh.html#section_10">Social History</a>
+                         </li>
+                      </ul>
+                   </li>
+                </ul>
+             </td>
+             <td style="background-color: white;">
+                <div id="sectionsToggleExpand" style="display: none;" class="span_button" onclick="expandAllSections();">Expand All</div>
+                <div id="sectionsToggleCollapse" class="span_button" onclick="collapseAllSections();">Collapse All</div>
+             </td>
+          </tr>
+       </tbody>
+    </table>
+  </div>
+  </div>
+  <div id="documentbody">
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_1" title="Allergy List">Allergies</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>There are no current allergies at the time of this document's creation.</div>
+       </div>
+    </div>
+  </div>
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_2" title="History of medication use">Medications</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>There are no current medications at the time of this document's creation.</div>
+       </div>
+    </div>
+  </div>
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_3" title="Results">Diagnostic Results</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>There are no current results at the time of this document's creation.</div>
+       </div>
+    </div>
+  </div>
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_4" title="Problem List">Problems</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>There are no current problem concern acts at the time of this document's creation.</div>
+       </div>
+    </div>
+  </div>
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_5" title="Procedures">Procedures</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>There are no current procedures at the time of this document's creation.</div>
+       </div>
+    </div>
+  </div>
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_6" title="History of encounters">Encounters</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>
+             <table class="narr_table" cellspacing="1" cellpadding="1" width="100%" border="1">
+                <thead>
+                   <tr class="narr_tr">
+                      <th class="narr_th">Start</th>
+                      <th class="narr_th">Stop</th>
+                      <th class="narr_th">Description</th>
+                      <th class="narr_th">Code</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>2020-01-27T08:38:48-06:00</td>
+                      <td id="encounters-desc-1">Well child visit (procedure)</td>
+                      <td id="encounters-code-1">http://snomed.info/sct 410620009</td>
+                   </tr>
+                </tbody>
+             </table>
+          </div>
+       </div>
+    </div>
+  </div>
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_7" title="Vital signs">Vital Signs</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>
+             <table class="narr_table" cellspacing="1" cellpadding="1" width="100%" border="1">
+                <thead>
+                   <tr class="narr_tr">
+                      <th class="narr_th">Start</th>
+                      <th class="narr_th">Stop</th>
+                      <th class="narr_th">Description</th>
+                      <th class="narr_th">Code</th>
+                      <th class="narr_th">Value</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="observations-desc-1">Body Height</td>
+                      <td id="observations-code-1">http://loinc.org 8302-2</td>
+                      <td>163.1 cm</td>
+                   </tr>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="observations-desc-2">Pain severity - 0-10 verbal numeric rating [Score] - Reported</td>
+                      <td id="observations-code-2">http://loinc.org 72514-3</td>
+                      <td>2 {score}</td>
+                   </tr>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="observations-desc-3">Body Weight</td>
+                      <td id="observations-code-3">http://loinc.org 29463-7</td>
+                      <td>47.1 kg</td>
+                   </tr>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="observations-desc-4">Body Mass Index</td>
+                      <td id="observations-code-4">http://loinc.org 39156-5</td>
+                      <td>17.7 kg/m2</td>
+                   </tr>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="observations-desc-5">Body mass index (BMI) [Percentile] Per age and gender</td>
+                      <td id="observations-code-5">http://loinc.org 59576-9</td>
+                      <td>34.44536499811594 %</td>
+                   </tr>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="observations-desc-6">Blood Pressure</td>
+                      <td id="observations-code-6">http://loinc.org 85354-9</td>
+                      <td>
+  Diastolic Blood Pressure 76 mm[Hg]
+  Systolic Blood Pressure 110 mm[Hg]
+  </td>
+                   </tr>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="observations-desc-7">Heart rate</td>
+                      <td id="observations-code-7">http://loinc.org 8867-4</td>
+                      <td>60 /min</td>
+                   </tr>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="observations-desc-8">Respiratory rate</td>
+                      <td id="observations-code-8">http://loinc.org 9279-1</td>
+                      <td>14 /min</td>
+                   </tr>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="observations-desc-9">Tobacco smoking status NHIS</td>
+                      <td id="observations-code-9">http://loinc.org 72166-2</td>
+                      <td>system=http://snomed.info/sct, code=266919005, display=Never smoker, valueSet=null </td>
+                   </tr>
+                </tbody>
+             </table>
+          </div>
+       </div>
+    </div>
+  </div>
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_8" title="History of immunizations">Immunizations</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>
+             <table class="narr_table" cellspacing="1" cellpadding="1" width="100%" border="1">
+                <thead>
+                   <tr class="narr_tr">
+                      <th class="narr_th">Start</th>
+                      <th class="narr_th">Stop</th>
+                      <th class="narr_th">Description</th>
+                      <th class="narr_th">Code</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="immunizations-desc-1">Influenza, seasonal, injectable, preservative free</td>
+                      <td id="immunizations-code-1">http://hl7.org/fhir/sid/cvx 140</td>
+                   </tr>
+                   <tr class="narr_tr">
+                      <td>2020-01-27T08:23:48-06:00</td>
+                      <td>
+                      </td><td id="immunizations-desc-2">HPV, quadrivalent</td>
+                      <td id="immunizations-code-2">http://hl7.org/fhir/sid/cvx 62</td>
+                   </tr>
+                </tbody>
+             </table>
+          </div>
+       </div>
+    </div>
+  </div>
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_9" title="Diagnostic Imaging Report">Imaging Studies</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>There are no current imaging studies at the time of this document's creation.</div>
+       </div>
+    </div>
+  </div>
+  <div style="margin-left: 0em;" class="section">
+    <div class="section-title">
+       <div class="button expandCollapse" onclick="collapseSection(this)" title="Collapse">▼</div>
+       <h3 id="section_10" title="29762-2">Social History</h3>
+    </div>
+    <div class="section-content">
+       <div class="section-body">
+          <div>There is no current social history at the time of this document's creation.</div>
+       </div>
+    </div>
+  </div>
+  </div>
+  <div id="documentfooter">
+  <table class="header_table">
+    <tbody>
+       <tr>
+          <td class="td_label td_label_width">Document</td>
+          <td style="width: 30%;">
+             <table class="table_simple">
+                <tbody>
+                   <tr>
+                      <td class="td_label">ID</td>
+                      <td>
+                         <span title="https://github.com/synthetichealth/synthea">17412c5c-d05c-8e61-e4d4-1efb575568dd (2.16.840.1.113883.19.5)</span>
+                      </td>
+                   </tr>
+                </tbody>
+             </table>
+          </td>
+          <td class="td_label td_label_width">Created On</td>
+          <td>December  14, 2020, 08:23:48AM</td>
+       </tr>
+    </tbody>
+  </table>
+  <table class="header_table">
+    <tbody>
+       <tr>
+          <td class="td_label td_label_width">Custodian</td>
+          <td style="width: 30%;">GROUP HEALTH COOPERATIVE OF SOUTH CENTRAL WISCONSIN</td>
+          <td class="td_label td_label_width">Contact Details</td>
+          <td>3051 CAHILL MAIN<br>FITCHBURG, WI 53711-7109<br>
+             <br>
+          </td>
+       </tr>
+    </tbody>
+  </table>
+  <div class="separator">&nbsp;</div>
+  <table class="header_table">
+    <tbody>
+       <tr>
+          <td class="td_label td_label_width">Patient</td>
+          <td style="width: 30%;">Kelli FRITSCH</td>
+          <td class="td_label td_label_width">Contact Details</td>
+          <td style="width: 30%;">Home Primary: 853 Schinner Ramp<br>Madison, Wisconsin 53703<br>
+             <br>
+          </td>
+       </tr>
+       <tr>
+          <td class="td_label td_label_width">Date of Birth</td>
+          <td style="width: 30%;">January  1, 2007, 08:23:48AM (13yr)</td>
+          <td class="td_label td_label_width">Gender</td>
+          <td>F</td>
+       </tr>
+       <tr>
+          <td class="td_label td_label_width">Race</td>
+          <td style="width: 30%;">white</td>
+          <td class="td_label td_label_width">Ethnicity</td>
+          <td>non-hispanic</td>
+       </tr>
+       <tr>
+          <td class="td_label td_label_width">Patient-IDs</td>
+          <td>
+             <span title="https://github.com/synthetichealth/synthea">3SxYKMydmRpoQgkYcd9x5Z (2.16.840.1.113883.19.5)</span>
+          </td>
+          <td class="td_label td_label_width">Language Communication</td>
+          <td colspan="3">
+             <div>en-US</div>
+          </td>
+       </tr>
+    </tbody>
+  </table>
+  <div class="separator">&nbsp;</div>
+  <table class="header_table">
+    <tbody>
+       <tr>
+          <td class="td_label td_label_width">Documentation&nbsp;Of - care provision</td>
+          <td style="width: 80%;" colspan="3">from&nbsp;January  1, 2007, 08:23:48AM to&nbsp;December  14, 2020, 08:23:48AM</td>
+       </tr>
+    </tbody>
+  </table>
+  <div class="separator">&nbsp;</div>
+  <table class="header_table">
+    <tbody>
+       <tr>
+          <td class="td_label td_label_width" rowspan="2">Author</td>
+          <td style="width: 30%;" rowspan="2">https://github.com/synthetichealth/synthea, Organization: GROUP HEALTH COOPERATIVE OF SOUTH CENTRAL WISCONSIN</td>
+          <td class="td_label td_label_width">Contact Details</td>
+          <td>not applicable<br>
+          </td>
+       </tr>
+       <tr>
+          <td class="td_label td_label_width">Contact Details (Organization)</td>
+          <td>3051 CAHILL MAIN<br>FITCHBURG, WI 53711-7109<br>
+             <br>
+          </td>
+       </tr>
+    </tbody>
+  </table>
+  </div>
 
-
-</body></html>
+</body>
+</html>
