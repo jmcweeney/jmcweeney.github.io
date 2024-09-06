@@ -13,7 +13,7 @@ var gStringCollapse = "Collapse"; var gStringExpand = "Expand";
       }
       function expandSection(sectionTitleButton) {
           sectionTitleButton.title = gStringCollapse;
-          sectionTitleButton.innerText = '▼';
+          sectionTitleButton.innerText = '^';
           sectionTitleButton.onclick = function (){collapseSection(this);};
           var sectionContent = sectionTitleButton.parentElement.parentElement.children[1]
           if (sectionContent != null) {
@@ -34,7 +34,7 @@ var gStringCollapse = "Collapse"; var gStringExpand = "Expand";
       }
       function collapseSection(sectionTitleButton) {
           sectionTitleButton.title = gStringExpand;
-          sectionTitleButton.innerText = '▶';
+          sectionTitleButton.innerText = '›';
           sectionTitleButton.onclick = function (){expandSection(this);};
           var sectionContent = sectionTitleButton.parentElement.parentElement.children[1]
           if (sectionContent != null) {

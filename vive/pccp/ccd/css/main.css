@@ -6,15 +6,16 @@ Updated by Jeff McWeeney
 jmcweeney@viveconcierge.next
 
 ----- */
-*{
-    font-family: Helvetica, Tahoma, sans-serif;
-    font-size: 11px;
+* {
+    font-family: "Manrope", Helvetica, Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.3em;
+    /* letter-spacing: -0.0125em; */
 }
 body{
-    padding: 2px;
+    padding: 8px;
     color: #003366;
-    background-color: white;
-    font-size: 12px;
+    background-color: #FFFFFF;
 }
 #documentheader,
 #documentbody,
@@ -34,14 +35,15 @@ a{
     background-color: white;
 }
 h1{
-    font-size: 40px;
+    font-size: 48px;
     font-weight: bold;
+    line-height: 1.1em;
 }
 h1.title{
-    text-align: center;
+    text-align: left;
 }
 h2{
-    font-size: 32px;
+    font-size: 40px;
     font-weight: bold;
 }
 h3{
@@ -67,9 +69,13 @@ span {
     font-size: 16px; /* IE8 hack: doesn't understand inheritance */
     display: inline; /* IE8 hack: would go to next line otherwise */
 }
+
+/* ----- Tables ----- */
+
 table{
-    line-height: 10pt;
+    line-height: 1.1em;
     width: 100%;
+    text-align: left;
 }
 thead tr, th{
     background-color: LightGrey;
@@ -79,7 +85,7 @@ tbody tr{
 }
 td{
     font-size: 16px; /* IE8 hack: doesn't understand inheritance */
-    padding: 0.1cm 0.2cm;
+    padding: 8px;
     vertical-align: top;
 }
 .table_simple{
@@ -94,28 +100,29 @@ td{
     font-size: 16px; /* IE8 hack: doesn't understand inheritance */
     font-weight: inherit;
     font-style: italic;
-    padding-right: 0.2cm;
+    padding-right: 16px;
 }
 .header_table{
-    border: 1pt solid #00008b;
+    border: 1px solid #00008b;
 }
 .narr_table{
     width: 100%;
-    margin: 0.3em 0;
+    margin: 8px 0;
 }
 .narr_tr{
-    //background-color: #ffffcc;
+    background-color: #f0f0f0;
 }
 .narr_th{
     background-color: LightGrey;
-    font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+    font-size: 14px; /* IE8 hack: doesn't understand inheritance */
+    padding: 0 8px 0 8px;
 }
 .narr_footnote{
-    font-size: 8pt;
+    font-size: 12px;
     font-style: italic;
 }
 .td_label{
-    font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+    font-size: 14px; /* IE8 hack: doesn't understand inheritance */
     font-weight: bold;
     background-color: LightGrey;
 }
@@ -123,11 +130,11 @@ td{
     width: 20%;
 }
 .span_label{
-    font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+    font-size: 16px; /* IE8 hack: doesn't understand inheritance */
     font-weight: bold;
 }
 .span_value{
-    font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+    font-size: 16px; /* IE8 hack: doesn't understand inheritance */
     font-weight: normal;
 }
 .revision_insert{
@@ -144,19 +151,20 @@ td{
 .span_button {
     display: table-cell;
     cursor: pointer;
-    border: 2pt inset #585858;
-    border-radius: 15px;
-    -moz-border-radius: 15px;
-    padding: 0.1cm 0.2cm;
+    border: 1px solid #999999;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    padding: 8px 16px;
     background-color: #f2f2f2;
     font-weight: bold;
     vertical-align: baseline;
-    width: 150px;
+    width: auto;
+    font-size: 16px;
 }
 .warning-sign {
     border: 1px solid red;
     background-color: yellow;
-    margin: 1em 0.5em;
+    margin: 8px 16px;
 }
 div.separator {
     height: 1em;

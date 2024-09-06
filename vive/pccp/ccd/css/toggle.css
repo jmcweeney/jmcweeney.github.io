@@ -2,6 +2,7 @@
 
 div.button.expandCollapse {
     float: left;
-    margin-right: 10px;
+    margin: 8px 8px 8px 0;
     cursor: pointer;
+    font-size: 16px;
 }
