@@ -14,7 +14,7 @@ jmcweeney@viveconcierge.next
 }
 body{
     padding: 8px;
-    color: #003366;
+    color: #0B1215;
     background-color: #FFFFFF;
 }
 #documentheader,
@@ -47,7 +47,7 @@ h2{
     font-weight: bold;
 }
 h3{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
 }
 h4{
@@ -172,4 +172,16 @@ div.separator {
 div.caption {
     font-weight: bold;
     text-align: center;
+}
+
+/* ----- Sections ----- */
+
+.section {
+  background-color: #ffffff;
+  padding: 8px 0 20px 0;
+  border-top: 1px solid #cccccc;
+}
+
+.section h3 {
+  margin: 0 0 4px 0;
 }
