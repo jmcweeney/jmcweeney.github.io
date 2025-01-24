@@ -41,9 +41,8 @@
     async function fetchEggData() {
       const apiKey = '0704cc5d3a8a22a1bb90e5c43d4e1ef0';
       const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-const fredApiUrl = `https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=0704cc5d3a8a22a1bb90e5c43d4e1ef0&file_type=json`;
-const endpoint = `${proxyUrl}${fredApiUrl}`;
-
+      const fredApiUrl = `https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=0704cc5d3a8a22a1bb90e5c43d4e1ef0&file_type=json`;
+      const endpoint = `${proxyUrl}${fredApiUrl}`;
 
       try {
         const response = await fetch(endpoint);
@@ -80,6 +79,8 @@ const endpoint = `${proxyUrl}${fredApiUrl}`;
   <h1>Current Egg Price</h1>
   <div class="price" id="price">Loading...</div>
   <div class="change" id="change">Calculating change...</div>
+  <div id="date"></div> <!-- Ensure this exists -->
+
   <!-- <img src="https://example.com/egg-carton.png" alt="Carton of Eggs"> -->
 </body>
 </html>
