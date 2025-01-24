@@ -37,43 +37,44 @@
     }
   </style>
   <script>
-  async function fetchEggData() {
-    const apiKey = "0704cc5d3a8a22a1bb90e5c43d4e1ef0";
-    const endpoint = `https://cors-anywhere.herokuapp.com/https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=${apiKey}&file_type=json`;
+    async function fetchEggData() {
+      const apiKey = '0704cc5d3a8a22a1bb90e5c43d4e1ef0';
+      const fredApiUrl = `https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=${apiKey}&file_type=json`;
 
-    try {
-      const response = await fetch(endpoint);
-      const data = await response.json();
+      // Use a CORS proxy to bypass restrictions
+      const proxyUrl = 'https://corsproxy.io/?'; // Free proxy service
+      const endpoint = `${proxyUrl}${encodeURIComponent(fredApiUrl)}`;
 
-      console.log("API Response:", data); // Log the response to inspect its structure
+      try {
+        const response = await fetch(endpoint);
+        const data = await response.json();
 
-      if (data && data.observations && data.observations.length > 0) {
-        const observations = data.observations;
-        const latestObservation = observations[observations.length - 1];
-        const latestPrice = parseFloat(latestObservation.value);
-        const date = latestObservation.date;
+        if (data && data.observations && data.observations.length > 0) {
+          const observations = data.observations;
+          const latestObservation = observations[observations.length - 1];
+          const latestPrice = parseFloat(latestObservation.value);
+          const date = latestObservation.date;
 
-        document.getElementById('date').textContent = `Date: ${date}`;
-        document.getElementById('price').textContent = `$${latestPrice.toFixed(2)}`;
+          document.getElementById('date').textContent = `Date: ${date}`;
+          document.getElementById('price').textContent = `$${latestPrice.toFixed(2)}`;
 
-        const jan20Price = 3.00; // Replace with actual historical price for Jan 20, 2025
-        const percentageChange = ((latestPrice - jan20Price) / jan20Price) * 100;
+          const jan20Price = 6.06; // Replace with the actual price for Jan 20, 2025
+          const percentageChange = ((latestPrice - jan20Price) / jan20Price) * 100;
 
-        document.getElementById('change').textContent = `${percentageChange.toFixed(2)}% since Jan 20, 2025`;
-      } else {
-        document.getElementById('price').textContent = "Data unavailable";
-        document.getElementById('change').textContent = "No percentage change data available.";
+          document.getElementById('change').textContent = `${percentageChange.toFixed(2)}% since Jan 20, 2025`;
+        } else {
+          document.getElementById('price').textContent = 'Data unavailable';
+          document.getElementById('change').textContent = 'No percentage change data available.';
+        }
+      } catch (error) {
+        console.error('Error fetching egg price data:', error);
+        document.getElementById('price').textContent = 'Error loading price';
+        document.getElementById('change').textContent = 'Error calculating change.';
       }
-    } catch (error) {
-      console.error('Error fetching egg price data:', error);
-      document.getElementById('price').textContent = "Error loading price";
-      document.getElementById('change').textContent = "Error calculating change.";
     }
-  }
 
-  window.onload = fetchEggData;
-</script>
-
+    window.onload = fetchEggData;
+  </script>
 </head>
 <body>
   <h1>Current Egg Price</h1>
