@@ -39,7 +39,7 @@
   <script>
   async function fetchEggData() {
     const apiKey = "0704cc5d3a8a22a1bb90e5c43d4e1ef0";
-    const endpoint = `https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=${apiKey}&file_type=json`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=${apiKey}&file_type=json`;
 
     try {
       const response = await fetch(endpoint);
