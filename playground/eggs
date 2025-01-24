@@ -38,7 +38,7 @@
   </style>
   <script>
     async function fetchEggData() {
-      const apiKey = "YOUR_API_KEY"; // Replace with your FRED API key
+      const apiKey = "0704cc5d3a8a22a1bb90e5c43d4e1ef0"; // Replace with your FRED API key
       const endpoint = `https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=0704cc5d3a8a22a1bb90e5c43d4e1ef0&file_type=json`;
 
       try {
