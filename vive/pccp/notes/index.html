@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Notes</title>
+    <style>
+        body {
+            font-family: "Helvetica", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        h1, h2 {
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        @media only screen and (max-width: 768px) {
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Health Record</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Information</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Title</td>
+                    <td>Patient Health Record</td>
+                </tr>
+                <tr>
+                    <td>Effective Time</td>
+                    <td>2024-07-01</td>
+                </tr>
+                <tr>
+                    <td>Confidentiality</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>Language Code</td>
+                    <td>en-US</td>
+                </tr>
+                <tr>
+                    <td>Patient Name</td>
+                    <td>PatientFName PatientLName</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>1215 LODI PL, Los Angeles, CA 90038</td>
+                </tr>
+                <tr>
+                    <td>Birth Date</td>
+                    <td>1997-01-21</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Allergies</h2>
+        <p>No Known Allergies</p>
+
+        <h2>Immunizations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Vaccine</th>
+                    <th>Route</th>
+                    <th>Administration Date</th>
+                    <th>Status</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PPD</td>
+                    <td>SC Subcutaneous</td>
+                    <td>03/09/2022</td>
+                    <td>Administered</td>
+                    <td>OK BY CHUN JENNIFER</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Medications</h2>
+        <p>No Information</p>
+    </div>
+</body>
+</html>
