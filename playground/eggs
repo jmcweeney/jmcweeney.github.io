@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egg Price Tracker</title>
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: white;
+      color: black;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .price {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .change {
+      font-size: 1.5rem;
+      color: gray;
+    }
+    img {
+      width: 150px;
+      height: auto;
+      margin-top: 1rem;
+    }
+  </style>
+  <script>
+    async function fetchEggData() {
+      const apiKey = "YOUR_API_KEY"; // Replace with your FRED API key
+      const endpoint = `https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=0704cc5d3a8a22a1bb90e5c43d4e1ef0&file_type=json`;
+
+      try {
+        const response = await fetch(endpoint);
+        const data = await response.json();
+
+        // Extract the latest observation
+        const observations = data.observations;
+        const latestObservation = observations[observations.length - 1];
+        const latestPrice = parseFloat(latestObservation.value);
+        const date = latestObservation.date;
+
+        document.getElementById('date').textContent = `Date: ${date}`;
+        document.getElementById('price').textContent = `$${latestPrice.toFixed(2)}`;
+
+        // Calculate percentage change from Jan 20, 2025
+        const jan20Price = 3.00; // Replace with actual historical price for Jan 20, 2025
+        const percentageChange = ((latestPrice - jan20Price) / jan20Price) * 100;
+
+        document.getElementById('change').textContent = `${percentageChange.toFixed(2)}% since Jan 20, 2025`;
+      } catch (error) {
+        console.error('Error fetching egg price data:', error);
+      }
+    }
+
+    window.onload = fetchEggData;
+  </script>
+</head>
+<body>
+  <h1>Current Egg Price</h1>
+  <div class="price" id="price">Loading...</div>
+  <div class="change" id="change">Calculating change...</div>
+  <img src="https://example.com/egg-carton.png" alt="Carton of Eggs">
+</body>
+</html>
