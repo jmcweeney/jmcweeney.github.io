@@ -37,15 +37,17 @@
     }
   </style>
   <script>
-    async function fetchEggData() {
-      const apiKey = "0704cc5d3a8a22a1bb90e5c43d4e1ef0"; // Replace with your FRED API key
-      const endpoint = `https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=0704cc5d3a8a22a1bb90e5c43d4e1ef0&file_type=json`;
+  async function fetchEggData() {
+    const apiKey = "0704cc5d3a8a22a1bb90e5c43d4e1ef0";
+    const endpoint = `https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=${apiKey}&file_type=json`;
 
-      try {
-        const response = await fetch(endpoint);
-        const data = await response.json();
+    try {
+      const response = await fetch(endpoint);
+      const data = await response.json();
 
-        // Extract the latest observation
+      console.log("API Response:", data); // Log the response to inspect its structure
+
+      if (data && data.observations && data.observations.length > 0) {
         const observations = data.observations;
         const latestObservation = observations[observations.length - 1];
         const latestPrice = parseFloat(latestObservation.value);
@@ -54,18 +56,24 @@
         document.getElementById('date').textContent = `Date: ${date}`;
         document.getElementById('price').textContent = `$${latestPrice.toFixed(2)}`;
 
-        // Calculate percentage change from Jan 20, 2025
         const jan20Price = 3.00; // Replace with actual historical price for Jan 20, 2025
         const percentageChange = ((latestPrice - jan20Price) / jan20Price) * 100;
 
         document.getElementById('change').textContent = `${percentageChange.toFixed(2)}% since Jan 20, 2025`;
-      } catch (error) {
-        console.error('Error fetching egg price data:', error);
+      } else {
+        document.getElementById('price').textContent = "Data unavailable";
+        document.getElementById('change').textContent = "No percentage change data available.";
       }
+    } catch (error) {
+      console.error('Error fetching egg price data:', error);
+      document.getElementById('price').textContent = "Error loading price";
+      document.getElementById('change').textContent = "Error calculating change.";
     }
+  }
 
-    window.onload = fetchEggData;
-  </script>
+  window.onload = fetchEggData;
+</script>
+
 </head>
 <body>
   <h1>Current Egg Price</h1>
