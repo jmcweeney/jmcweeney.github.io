@@ -43,7 +43,8 @@
       const fredApiUrl = `https://api.stlouisfed.org/fred/series/observations?series_id=APU0000708111&api_key=${apiKey}&file_type=json`;
 
       // Use a CORS proxy to bypass restrictions
-      const proxyUrl = 'https://corsproxy.io/?'; // Free proxy service
+      const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+
       const endpoint = `${proxyUrl}${encodeURIComponent(fredApiUrl)}`;
 
       try {
